@@ -7,7 +7,7 @@ Site statique (HTML / CSS / JS, sans build) prévu pour GitHub Pages.
 1. Dépose le fichier dans `videos/` (ex. `videos/01-pendule.mp4`).
 2. Vérifie que le chemin correspond au champ `file` du chapitre dans `js/chapters.js`.
 
-Tant que le fichier est absent, le site affiche « Vidéo à venir ».
+Tant que le fichier est absent, le chapitre s'affiche sans vidéo (en local, un cadre indique le chemin attendu).
 
 Pour ajouter, réordonner ou réécrire un chapitre, tout se passe dans `js/chapters.js`.
 
