@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Josselin Renan — Simulation physique temps réel</title>
+  <meta name="description" content="Ingénieur logiciel 3D. XDEPhysics : l'intégration du moteur physique XDE du CEA dans NVIDIA Omniverse, comme alternative à PhysX. Du premier cube aux robots et aux câbles, en vidéos.">
+  <meta property="og:title" content="Josselin Renan — Simulation physique temps réel">
+  <meta property="og:description" content="XDEPhysics : le moteur physique XDE dans NVIDIA Omniverse. Du premier cube aux robots et aux câbles.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3 L23 22' stroke='%23ff8a3d' stroke-width='2'/%3E%3Ccircle cx='16' cy='3' r='2' fill='%23ff8a3d'/%3E%3Ccircle cx='23' cy='24' r='6' fill='%23ff8a3d'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav__name" href="#top">Josselin Renan</a>
+  <nav class="nav__links" aria-label="Navigation principale">
+    <a href="#parcours">Parcours</a>
+    <a href="#apropos">À propos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__text">
+      <p class="eyebrow">Ingénieur logiciel 3D · CEA List</p>
+      <h1>Le moteur physique <em>XDE</em>, dans Omniverse.</h1>
+      <p class="hero__lead">
+        Depuis 2023, je développe XDEPhysics : l'intégration de XDE, le moteur physique du CEA,
+        dans NVIDIA Omniverse, comme alternative à PhysX. Toutes les simulations de cette page
+        tournent avec XDE, à travers les outils que j'ai écrits.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#parcours">Suivre le parcours</a>
+        <a class="btn" href="#contact">Me contacter</a>
+      </div>
+      <p class="hero__avail"><span class="dot" aria-hidden="true"></span>Disponible dès janvier 2027 · Île-de-France, France entière</p>
+    </div>
+
+    <figure class="hero__sim">
+      <canvas id="pendulum" aria-label="Pendule interactif : attrapez la masse et lâchez-la"></canvas>
+      <figcaption>Attrapez la masse, lâchez-la. <span>Petite simulation JavaScript écrite pour cette page — ce n'est pas XDE.</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="why" aria-labelledby="pourquoi-titre">
+    <div class="section-head">
+      <p class="eyebrow">Pourquoi</p>
+      <h2 id="pourquoi-titre">Ce que montrent ces vidéos</h2>
+    </div>
+    <div class="why__grid">
+      <div class="why__col why__col--accent">
+        <p class="why__label">Mon travail</p>
+        <h3>XDEPhysics</h3>
+        <p>Les extensions Omniverse Kit que je développe pour intégrer XDE : schémas OpenUSD dédiés, traitement runtime avec USDRT, interface de création de scènes physiques. C'est ce que j'utilise dans chaque vidéo.</p>
+      </div>
+      <div class="why__col">
+        <p class="why__label">Le moteur</p>
+        <h3>XDE</h3>
+        <p>Le moteur physique développé au CEA List. C'est lui qui calcule toutes les simulations présentées ici — pas PhysX, le moteur livré par défaut avec Omniverse.</p>
+      </div>
+    </div>
+    <!-- TODO Josselin : 2 ou 3 phrases sur ce que XDE apporte par rapport à PhysX (ce pour quoi le labo l'utilise). -->
+  </section>
+
+  <section class="story" id="parcours" aria-labelledby="parcours-titre">
+    <div class="section-head">
+      <p class="eyebrow">Parcours</p>
+      <h2 id="parcours-titre">Du premier cube au démonstrateur</h2>
+    </div>
+    <div class="story__track">
+      <div class="story__rail" aria-hidden="true"><div class="story__fill"></div></div>
+      <ol class="story__chapters" id="chapters"></ol>
+    </div>
+    <noscript><p class="section-note">Activez JavaScript pour afficher les chapitres et les vidéos.</p></noscript>
+  </section>
+
+  <section class="about" id="apropos" aria-labelledby="apropos-titre">
+    <div class="section-head">
+      <p class="eyebrow">À propos</p>
+      <h2 id="apropos-titre">Plus de trois ans de R&amp;D en simulation interactive</h2>
+    </div>
+
+    <div class="about__grid">
+      <div class="about__bio">
+        <p>
+          Ingénieur chercheur au Laboratoire de Simulation Interactive du CEA List, je développe
+          <strong>XDEPhysics</strong> : les extensions Omniverse Kit qui intègrent le moteur physique XDE,
+          de l'implémentation bas niveau jusqu'à l'interface de création de scènes physiques réalistes.
+          Ces outils sont utilisés au quotidien par cinq personnes du laboratoire.
+        </p>
+        <p>
+          Je cherche un poste d'ingénieur logiciel 3D en simulation industrielle.
+        </p>
+
+        <h3>Expérience</h3>
+        <ul class="timeline">
+          <li>
+            <span class="timeline__date">11/2023 – 11/2026</span>
+            <div><strong>Ingénieur chercheur</strong> — CEA List, Laboratoire de Simulation Interactive
+              <p>Moteur physique XDE dans NVIDIA Omniverse, schémas OpenUSD personnalisés, jumeaux numériques industriels, démonstrateurs.</p></div>
+          </li>
+          <li>
+            <span class="timeline__date">04/2023 – 11/2023</span>
+            <div><strong>Stage de fin d'études</strong> — CEA List
+              <p>Exploration de NVIDIA Omniverse en vue d'y intégrer XDE.</p></div>
+          </li>
+          <li>
+            <span class="timeline__date">11/2021 – 04/2022</span>
+            <div><strong>Stage en développement VR</strong> — Virtual Rangers
+              <p>Expérience immersive sur système CAVE pour les CFL (Luxembourg) ; expérience ludique en réalité virtuelle.</p></div>
+          </li>
+          <li>
+            <span class="timeline__date">2018 – 2023</span>
+            <div><strong>Diplôme d'ingénieur</strong> — EFREI Paris
+              <p>Majeure 3D et technologies immersives.</p></div>
+          </li>
+        </ul>
+      </div>
+
+      <dl class="skills">
+        <div><dt>Moteurs &amp; plateformes</dt><dd>NVIDIA Omniverse (Kit, USDRT), OpenUSD, Unity</dd></div>
+        <div><dt>XR</dt><dd>OpenXR, hand tracking, VR, AR (Vuforia), CAVE</dd></div>
+        <div><dt>Simulation</dt><dd>Intégration de moteur physique, jumeaux numériques</dd></div>
+        <div><dt>Langages</dt><dd>C++, Python, C#, C</dd></div>
+        <div><dt>Architecture</dt><dd>POO, ECS</dd></div>
+        <div><dt>Anglais</dt><dd>TOEIC 905/990</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-titre">
+    <p class="eyebrow">Contact</p>
+    <h2 id="contact-titre">Discutons simulation.</h2>
+    <p>Disponible dès janvier 2027 pour un poste d'ingénieur logiciel 3D en simulation industrielle.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="mailto:josselin.renan@gmail.com">josselin.renan@gmail.com</a>
+      <!-- TODO : remplacer par l'URL de ton profil LinkedIn -->
+      <a class="btn" href="https://www.linkedin.com/" rel="me noopener">LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year">2026</span> Josselin Renan. XDE est un moteur physique développé par le CEA List ; les vidéos sont publiées avec son accord.</p>
+</footer>
+
+<script src="js/chapters.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
