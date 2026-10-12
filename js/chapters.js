@@ -31,10 +31,10 @@ window.CHAPTERS = [
   },
   {
     topic: "Liaisons",
-    title: "Xde Kinema : liaison à partir d'une face",
+    title: "Xde Kinema : détection de face",
     text: [
       "Sur une scène plus complexe, l'outil Xde Kinema analyse la face pointée sur un maillage : normale, forme reconnue (plan, cercle) et rayon.",
-      "Ces informations servent à positionner la liaison à créer, ici de type Revolute."
+      "Ces informations servent à positionner des liaisons plus précisément."
     ],
     clips: [{ file: "videos/kinema.webm", caption: "Sélection de faces avec Xde Kinema." }]
   },
