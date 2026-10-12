@@ -87,24 +87,32 @@ section { padding-top: 56px; }
 /* ---------- Travaux ---------- */
 
 .works { list-style: none; margin: 0; padding: 0; }
-.work { padding: 32px 0; border-top: 1px solid var(--line); }
+.work {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 32px;
+  align-items: start;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
 .work:first-child { border-top: 0; padding-top: 0; }
-.work__text { max-width: 46em; }
+.work--text-only { grid-template-columns: minmax(0, 46em); }
 .work__meta { color: var(--muted); margin-bottom: 6px; }
 .work h3 { margin-bottom: 10px; }
 .work__text p:last-child { margin-bottom: 0; }
 
-/* Vidéo en pleine largeur sous le texte : les captures d'interface doivent rester lisibles. */
-.work__media { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 16px; margin-top: 18px; }
+.work__media { display: grid; gap: 16px; }
 .clip { margin: 0; }
-.clip video, .clip iframe {
+/* Le cadre épouse la vidéo : elle rétrécit pour tenir dans la colonne, sans jamais être agrandie. */
+.clip video {
   display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  height: auto;
   border: 1px solid var(--line);
   border-radius: 4px;
   background: #000;
 }
+.clip iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--line); border-radius: 4px; }
 .clip figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
 .clip__placeholder {
   aspect-ratio: 16 / 9;
@@ -139,7 +147,8 @@ section { padding-top: 56px; }
 
 @media (max-width: 720px) {
   h1 { font-size: 2rem; }
-  .entry, .skills { grid-template-columns: minmax(0, 1fr); }
+  .work, .entry, .skills { grid-template-columns: minmax(0, 1fr); }
+  .work { gap: 18px; }
   .entry { gap: 4px; }
   .entry__date { padding-top: 0; }
 }
