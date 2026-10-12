@@ -5,7 +5,7 @@
 // (en local, un cadre indique le chemin attendu).
 //
 // Un clip accepte :
-//   file    : chemin d'un .mp4 / .webm                (ex. "videos/02-pendule.mp4")
+//   file    : chemin d'un .mp4 / .webm                (ex. "videos/pendule.webm")
 //   youtube : identifiant d'une vidéo YouTube          — à la place de `file`
 //   poster  : image affichée avant la lecture          (optionnel)
 //   caption : légende sous la vidéo                    (optionnel)
@@ -18,7 +18,7 @@ window.CHAPTERS = [
       "Un cube est créé puis la simulation est lancée : il tombe et traverse la table, faute de groupe de collision.",
       "Après ajout d'un groupe de collision et relance de la simulation, le cube se pose sur la table."
     ],
-    clips: [{ file: "videos/01-cube-collision.mp4", caption: "Sans, puis avec groupe de collision." }]
+    clips: [{ file: "videos/cube-collision.webm", caption: "Sans, puis avec groupe de collision." }]
   },
   {
     topic: "Liaisons",
@@ -27,7 +27,7 @@ window.CHAPTERS = [
       "Le cube est dupliqué. Le premier est immobilisé par un FixedJoint ; le second lui est relié par un RevoluteJoint.",
       "Au lancement de la simulation, l'ensemble forme un pendule."
     ],
-    clips: [{ file: "videos/02-pendule.mp4", caption: "Deux cubes, un FixedJoint et un RevoluteJoint." }]
+    clips: [{ file: "videos/pendule.webm", caption: "Deux cubes, un FixedJoint et un RevoluteJoint." }]
   },
   {
     topic: "Liaisons",
@@ -44,7 +44,7 @@ window.CHAPTERS = [
     text: [
       "Dans la même scène, un robot réalise des opérations sur les objets simulés. Son comportement est décrit dans OmniGraph."
     ],
-    clips: [{ file: "videos/03-robot.mp4", caption: "Robot en opération et graphe OmniGraph associé." }]
+    clips: [{ file: "videos/robot.webm", caption: "Robot en opération et graphe OmniGraph associé." }]
   },
   {
     topic: "Câbles",
@@ -53,8 +53,8 @@ window.CHAPTERS = [
       "Création d'un câble dans l'éditeur, puis simulation de ses contacts avec le reste de la scène."
     ],
     clips: [
-      { file: "videos/04-cable-construction.mp4", caption: "Construction d'un câble." },
-      { file: "videos/04-cable-collision.mp4", caption: "Collision entre un câble et la scène." }
+      { file: "videos/cable-construction.webm", caption: "Construction d'un câble." },
+      { file: "videos/cable-collision.webm", caption: "Collision entre un câble et la scène." }
     ]
   },
   {
@@ -63,7 +63,7 @@ window.CHAPTERS = [
     text: [
       "Découpe d'un maillage pendant la simulation."
     ],
-    clips: [{ file: "videos/05-decoupe.mp4", caption: "Découpe d'un maillage." }]
+    clips: [{ file: "videos/decoupe.webm", caption: "Découpe d'un maillage." }]
   },
   {
     topic: "Analyse",
@@ -71,6 +71,6 @@ window.CHAPTERS = [
     text: [
       "Calcul du volume parcouru par un objet au cours de son mouvement."
     ],
-    clips: [{ file: "videos/06-volume-balaye.mp4", caption: "Volume balayé par un objet en mouvement." }]
+    clips: [{ file: "videos/volume-balaye.webm", caption: "Volume balayé par un objet en mouvement." }]
   }
 ];

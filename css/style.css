@@ -75,21 +75,15 @@ section { padding-top: 56px; }
 /* ---------- Travaux ---------- */
 
 .works { list-style: none; margin: 0; padding: 0; }
-.work {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
-  gap: 32px;
-  align-items: start;
-  padding: 28px 0;
-  border-top: 1px solid var(--line);
-}
+.work { padding: 32px 0; border-top: 1px solid var(--line); }
 .work:first-child { border-top: 0; padding-top: 0; }
-.work--text-only { grid-template-columns: minmax(0, 46em); }
+.work__text { max-width: 46em; }
 .work__meta { color: var(--muted); margin-bottom: 6px; }
 .work h3 { margin-bottom: 10px; }
 .work__text p:last-child { margin-bottom: 0; }
 
-.work__media { display: grid; gap: 16px; }
+/* Vidéo en pleine largeur sous le texte : les captures d'interface doivent rester lisibles. */
+.work__media { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 16px; margin-top: 18px; }
 .clip { margin: 0; }
 .clip video, .clip iframe {
   display: block;
@@ -133,8 +127,7 @@ section { padding-top: 56px; }
 
 @media (max-width: 720px) {
   h1 { font-size: 2rem; }
-  .work, .entry, .skills { grid-template-columns: minmax(0, 1fr); }
-  .work { gap: 18px; }
+  .entry, .skills { grid-template-columns: minmax(0, 1fr); }
   .entry { gap: 4px; }
   .entry__date { padding-top: 0; }
 }
