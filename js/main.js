@@ -32,11 +32,15 @@
       frame.append(iframe);
     } else if (clip.file) {
       const video = el("video");
-      video.controls = true;
+      // Lecture dès le chargement, en boucle et sans interface, comme une image animée.
+      // Si le visiteur a demandé moins d'animations, on lui laisse les contrôles à la place.
       video.muted = true;
       video.loop = true;
       video.playsInline = true;
-      video.preload = "metadata";
+      video.autoplay = !reducedMotion;
+      video.controls = reducedMotion;
+      video.disablePictureInPicture = true;
+      video.preload = "auto";
       if (clip.poster) video.poster = clip.poster;
       video.addEventListener("error", () => video.replaceWith(placeholder(clip)), { once: true });
       video.src = clip.file;
@@ -74,21 +78,11 @@
   const list = document.getElementById("chapters");
   (window.CHAPTERS || []).forEach((chapter, i) => list.append(buildChapter(chapter, i)));
 
-  // Apparition des chapitres + lecture automatique des vidéos visibles.
+  // Apparition des chapitres.
   const reveal = new IntersectionObserver((entries) => {
     for (const entry of entries) entry.target.classList.toggle("is-visible", entry.isIntersecting || entry.boundingClientRect.top < 0);
   }, { rootMargin: "0px 0px -20% 0px" });
   list.querySelectorAll(".chapter").forEach((chapter) => reveal.observe(chapter));
-
-  if (!reducedMotion) {
-    const autoplay = new IntersectionObserver((entries) => {
-      for (const { target, isIntersecting } of entries) {
-        if (isIntersecting) target.play().catch(() => {});
-        else target.pause();
-      }
-    }, { threshold: 0.6 });
-    list.querySelectorAll("video").forEach((video) => autoplay.observe(video));
-  }
 
   // Fil du parcours : se remplit au fil du défilement.
   const track = document.querySelector(".story__track");
