@@ -37,6 +37,5 @@ Puis ouvre http://localhost:8000.
 
 ## À faire avant publication
 
-- Remplacer le lien LinkedIn dans `index.html` (section contact).
 - Relire les textes des chapitres dans `js/chapters.js` (dates et descriptions sont des brouillons).
 - Obtenir l'accord du CEA (et de Renault pour le démonstrateur) pour la diffusion des vidéos.
