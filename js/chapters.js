@@ -30,6 +30,15 @@ window.CHAPTERS = [
     clips: [{ file: "videos/02-pendule.mp4", caption: "Deux cubes, un FixedJoint et un RevoluteJoint." }]
   },
   {
+    topic: "Liaisons",
+    title: "Xde Kinema : liaison à partir d'une face",
+    text: [
+      "Sur une scène plus complexe, l'outil Xde Kinema analyse la face pointée sur un maillage : normale, forme reconnue (plan, cercle) et rayon.",
+      "Ces informations servent à positionner la liaison à créer, ici de type Revolute."
+    ],
+    clips: [{ file: "videos/kinema.webm", caption: "Sélection de faces avec Xde Kinema." }]
+  },
+  {
     topic: "Robotique",
     title: "Robot piloté par OmniGraph",
     text: [
