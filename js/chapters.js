@@ -18,7 +18,7 @@ window.CHAPTERS = [
       "Un cube est créé puis la simulation est lancée : il tombe et traverse la table, faute de groupe de collision.",
       "Après ajout d'un groupe de collision et relance de la simulation, le cube se pose sur la table."
     ],
-    clips: [{ file: "videos/cube-collision.webm", caption: "Sans, puis avec groupe de collision." }]
+    clips: [{ file: "videos/cube-collision.webm" }]
   },
   {
     topic: "Liaisons",
@@ -27,7 +27,7 @@ window.CHAPTERS = [
       "Le cube est dupliqué. Le premier est immobilisé par un FixedJoint ; le second lui est relié par un RevoluteJoint.",
       "Au lancement de la simulation, l'ensemble forme un pendule."
     ],
-    clips: [{ file: "videos/pendule.webm", caption: "Deux cubes, un FixedJoint et un RevoluteJoint." }]
+    clips: [{ file: "videos/pendule.webm" }]
   },
   {
     topic: "Liaisons",
@@ -36,7 +36,7 @@ window.CHAPTERS = [
       "Sur une scène plus complexe, l'outil Xde Kinema analyse la face pointée sur un maillage : normale, forme reconnue (plan, cercle) et rayon.",
       "Ces informations servent à positionner des liaisons plus précisément."
     ],
-    clips: [{ file: "videos/kinema.webm", caption: "Sélection de faces avec Xde Kinema." }]
+    clips: [{ file: "videos/kinema.webm" }]
   },
   {
     topic: "Robotique",
@@ -44,7 +44,7 @@ window.CHAPTERS = [
     text: [
       "Dans la même scène, un robot réalise des opérations sur les objets simulés. Son comportement est décrit dans OmniGraph."
     ],
-    clips: [{ file: "videos/robot.webm", caption: "Robot en opération et graphe OmniGraph associé." }]
+    clips: [{ file: "videos/robot.webm" }]
   },
   {
     topic: "Câbles",
@@ -63,7 +63,7 @@ window.CHAPTERS = [
     text: [
       "Découpe d'un maillage pendant la simulation."
     ],
-    clips: [{ file: "videos/decoupe.webm", caption: "Découpe d'un maillage." }]
+    clips: [{ file: "videos/decoupe.webm" }]
   },
   {
     topic: "Analyse",
@@ -71,6 +71,6 @@ window.CHAPTERS = [
     text: [
       "Calcul du volume parcouru par un objet au cours de son mouvement."
     ],
-    clips: [{ file: "videos/volume-balaye.webm", caption: "Volume balayé par un objet en mouvement." }]
+    clips: [{ file: "videos/volume-balaye.webm" }]
   }
 ];
