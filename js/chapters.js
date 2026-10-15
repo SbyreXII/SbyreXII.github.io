@@ -58,14 +58,11 @@ window.CHAPTERS = [
   },
   {
     topic: "Câbles",
-    title: "Construction et collision de câbles",
+    title: "Collision de câbles",
     text: [
-      "Création d'un câble dans l'éditeur, puis simulation de ses contacts avec le reste de la scène."
+      "Des câbles déformables simulés par XDE : ils se plient, se tendent et entrent en contact les uns avec les autres."
     ],
-    clips: [
-      { file: "videos/cable-construction.webm", caption: "Création d'un câble." },
-      { file: "videos/cable-collision.webm", caption: "Des câbles qui entrent en contact les uns avec les autres." }
-    ]
+    clips: [{ file: "videos/cable-collision.webm", caption: "Des câbles qui entrent en contact les uns avec les autres." }]
   },
   {
     topic: "Géométrie",

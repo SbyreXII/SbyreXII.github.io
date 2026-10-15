@@ -49,14 +49,11 @@ window.CHAPTERS = [
   },
   {
     topic: "Cables",
-    title: "Building and colliding cables",
+    title: "Colliding cables",
     text: [
-      "Creating a cable in the editor, then simulating its contacts with the rest of the scene."
+      "Deformable cables simulated by XDE: they bend, stretch and come into contact with each other."
     ],
-    clips: [
-      { file: "../videos/cable-construction.webm", caption: "Creating a cable." },
-      { file: "../videos/cable-collision.webm", caption: "Cables coming into contact with each other." }
-    ]
+    clips: [{ file: "../videos/cable-collision.webm", caption: "Cables coming into contact with each other." }]
   },
   {
     topic: "Geometry",
