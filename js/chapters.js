@@ -27,7 +27,7 @@ window.CHAPTERS = [
       "Le cube est dupliqué. Le premier est immobilisé par un FixedJoint ; le second lui est relié par un RevoluteJoint.",
       "Au lancement de la simulation, l'ensemble forme un pendule."
     ],
-    clips: [{ file: "videos/pendule.webm" }]
+    clips: [{ file: "videos/pendule.webm", caption: "Création d'un pendule à partir de deux cubes." }]
   },
   {
     topic: "Liaisons",
@@ -36,7 +36,7 @@ window.CHAPTERS = [
       "Sur une scène plus complexe, l'outil Xde Kinema analyse la face pointée sur un maillage : normale, forme reconnue (plan, cercle) et rayon.",
       "Ces informations servent à positionner des liaisons plus précisément."
     ],
-    clips: [{ file: "videos/kinema.webm" }]
+    clips: [{ file: "videos/kinema.webm", caption: "Analyse de la face pointée à la souris." }]
   },
   {
     topic: "Robotique",
@@ -44,7 +44,7 @@ window.CHAPTERS = [
     text: [
       "Dans la même scène, un robot réalise des opérations sur les objets simulés. Son comportement est décrit dans OmniGraph."
     ],
-    clips: [{ file: "videos/robot.webm" }]
+    clips: [{ file: "videos/robot.webm", caption: "Un robot réalise des opérations dans la scène." }]
   },
   {
     topic: "Câbles",
@@ -53,8 +53,8 @@ window.CHAPTERS = [
       "Création d'un câble dans l'éditeur, puis simulation de ses contacts avec le reste de la scène."
     ],
     clips: [
-      { file: "videos/cable-construction.webm", caption: "Construction d'un câble." },
-      { file: "videos/cable-collision.webm", caption: "Collision entre un câble et la scène." }
+      { file: "videos/cable-construction.webm", caption: "Création d'un câble." },
+      { file: "videos/cable-collision.webm", caption: "Des câbles qui entrent en contact les uns avec les autres." }
     ]
   },
   {
@@ -63,7 +63,7 @@ window.CHAPTERS = [
     text: [
       "Découpe d'un maillage pendant la simulation."
     ],
-    clips: [{ file: "videos/decoupe.webm" }]
+    clips: [{ file: "videos/decoupe.webm", caption: "Un objet découpé pendant la simulation." }]
   },
   {
     topic: "Analyse",
@@ -71,6 +71,6 @@ window.CHAPTERS = [
     text: [
       "Calcul du volume parcouru par un objet au cours de son mouvement."
     ],
-    clips: [{ file: "videos/volume-balaye.webm" }]
+    clips: [{ file: "videos/volume-balaye.webm", caption: "Le volume parcouru par un objet en mouvement." }]
   }
 ];
