@@ -34,9 +34,18 @@ window.CHAPTERS = [
     title: "Robot arm: picking and inserting parts",
     text: [
       "A robot arm picks parts one by one and inserts them into a holder. Contacts between the gripper, the parts and the holder are computed by XDE.",
-      "The robot's behaviour is described in OmniGraph, Omniverse's visual scripting system."
+      "The robot's behaviour is described in OmniGraph, Omniverse's visual scripting system. This is the demonstration shown at Laval Virtual."
     ],
     clips: [{ file: "../videos/robot.webm", caption: "A robot picking parts and placing them in a holder." }]
+  },
+  {
+    topic: "Digital twin",
+    title: "Drone inside the Cadarache tokamak",
+    text: [
+      "I fly a drone inside the torus of the Cadarache tokamak. The facility was scanned and reconstructed with Gaussian Splatting by another team in the lab.",
+      "Two viewpoints: behind the drone, and the onboard camera."
+    ],
+    clips: [{ file: "../videos/drone-tokamak.webm", caption: "View from behind the drone (left) and onboard camera (right)." }]
   },
   {
     topic: "Cables",

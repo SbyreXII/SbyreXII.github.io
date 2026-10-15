@@ -43,9 +43,18 @@ window.CHAPTERS = [
     title: "Bras robotisé : prise et insertion de pièces",
     text: [
       "Un bras robotisé saisit des pièces une à une et les insère dans un support. Les contacts entre la pince, les pièces et le support sont calculés par XDE.",
-      "Le comportement du robot est décrit dans OmniGraph, le système de graphes d'Omniverse."
+      "Le comportement du robot est décrit dans OmniGraph, le système de graphes d'Omniverse. C'est cette démonstration qui a été présentée à Laval Virtual."
     ],
     clips: [{ file: "videos/robot.webm", caption: "Un robot qui prend des pièces et les range dans un support." }]
+  },
+  {
+    topic: "Jumeau numérique",
+    title: "Drone dans le tokamak de Cadarache",
+    text: [
+      "Je pilote un drone à l'intérieur du tore du tokamak de Cadarache. L'installation a été numérisée puis reconstruite en Gaussian Splatting par une autre équipe du laboratoire.",
+      "Deux points de vue : derrière le drone, et la caméra embarquée."
+    ],
+    clips: [{ file: "videos/drone-tokamak.webm", caption: "Vue depuis l'arrière du drone (à gauche) et caméra embarquée (à droite)." }]
   },
   {
     topic: "Câbles",
