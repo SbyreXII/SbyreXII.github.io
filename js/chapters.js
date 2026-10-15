@@ -60,7 +60,7 @@ window.CHAPTERS = [
   {
     id: "laval-virtual",
     topic: "Robotique",
-    title: "Robotique : la démonstration de Laval Virtual",
+    title: "Robotique : démonstration de Laval Virtual 2026",
     text: [
       "J'ai intégré de quoi décrire et piloter un robot dans la scène, y compris par graphes visuels avec OmniGraph.",
       "Dans la vidéo, un bras saisit des pièces une à une et les insère dans un support. Cette démonstration a été présentée à Laval Virtual en 2026, et en VR chez Cap Digital en mai 2026 au sein de la plateforme 2MORDOR du CEA List."
@@ -72,8 +72,9 @@ window.CHAPTERS = [
     ]
   },
   {
+    id: "drone",
     topic: "Jumeau numérique",
-    title: "Drone dans le tokamak WEST",
+    title: "Drone dans le tokamak WEST : démonstration de Laval Virtual 2026",
     text: [
       "J'ai intégré le pilotage à la manette d'un drone dont la physique est calculée par XDE, à l'intérieur du tokamak WEST de Cadarache.",
       "L'installation a été numérisée et reconstruite en Gaussian Splatting par une autre équipe du laboratoire. Deux vues : derrière le drone, et la caméra embarquée. Démonstration présentée à Laval Virtual en 2026."
