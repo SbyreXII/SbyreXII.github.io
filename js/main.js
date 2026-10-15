@@ -1,5 +1,6 @@
 (() => {
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const en = document.documentElement.lang === "en";
   const isLocal = location.protocol === "file:" || ["localhost", "127.0.0.1"].includes(location.hostname);
 
   const el = (tag, className, text) => {
@@ -22,7 +23,7 @@
       return;
     }
     const box = el("div", "clip__placeholder");
-    box.append(el("span", null, document.documentElement.lang === "en" ? "Video coming soon" : "Vidéo à venir"), el("code", null, clip.file));
+    box.append(el("span", null, en ? "Video coming soon" : "Vidéo à venir"), el("code", null, clip.file));
     figure.replaceChildren(box);
   }
 
@@ -38,18 +39,22 @@
       figure.append(iframe);
     } else {
       const video = el("video");
-      // Lecture dès le chargement, en boucle et sans interface.
+      // Lecture automatique, en boucle et sans interface, mais seulement à l'approche de l'écran :
+      // seules les métadonnées sont chargées d'avance, pour ne pas télécharger toutes les vidéos d'un coup.
       // Si le visiteur a demandé moins d'animations, on lui laisse les contrôles à la place.
       video.muted = true;
       video.loop = true;
       video.playsInline = true;
-      video.autoplay = !reducedMotion;
       video.controls = reducedMotion;
       video.disablePictureInPicture = true;
-      video.preload = "auto";
+      video.preload = "metadata";
       if (clip.poster) video.poster = clip.poster;
       video.addEventListener("error", () => markMissing(figure, clip), { once: true });
       video.src = clip.file;
+      if (!reducedMotion) {
+        video.title = en ? "Click to enlarge" : "Cliquer pour agrandir";
+        video.addEventListener("click", () => openLightbox(clip.file));
+      }
       figure.append(video);
     }
 
@@ -75,6 +80,38 @@
 
   const list = document.getElementById("chapters");
   (window.CHAPTERS || []).forEach((chapter, i) => list.append(buildWork(chapter, i)));
+
+  // Lecture quand la vidéo approche de l'écran, pause quand elle en sort.
+  if (!reducedMotion) {
+    const visibility = new IntersectionObserver((entries) => {
+      for (const { target, isIntersecting } of entries) {
+        if (isIntersecting) target.play().catch(() => {});
+        else target.pause();
+      }
+    }, { rootMargin: "200px 0px" });
+    list.querySelectorAll("video").forEach((video) => visibility.observe(video));
+  }
+
+  // Agrandissement d'une vidéo au clic, dans une fenêtre par-dessus la page.
+  let lightbox;
+  function openLightbox(file) {
+    if (!lightbox) {
+      lightbox = el("dialog", "lightbox");
+      lightbox.setAttribute("aria-label", en ? "Enlarged video" : "Vidéo agrandie");
+      const big = el("video");
+      big.muted = true; big.loop = true; big.playsInline = true; big.autoplay = true;
+      const close = el("button", "lightbox__close", "×");
+      close.setAttribute("aria-label", en ? "Close" : "Fermer");
+      lightbox.append(big, close);
+      lightbox.addEventListener("click", () => lightbox.close());
+      lightbox.addEventListener("close", () => big.pause());
+      document.body.append(lightbox);
+    }
+    const big = lightbox.querySelector("video");
+    if (!big.src.endsWith(file.replace(/^(\.\.\/)+/, ""))) big.src = file;
+    lightbox.showModal();
+    big.play().catch(() => {});
+  }
 
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
