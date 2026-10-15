@@ -64,6 +64,7 @@
 
   function buildWork(chapter, index) {
     const item = el("li", "work");
+    if (chapter.id) item.id = chapter.id;
 
     const text = el("div", "work__text");
     text.append(el("p", "work__meta", `${String(index + 1).padStart(2, "0")} · ${chapter.topic}`));

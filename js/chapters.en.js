@@ -4,40 +4,41 @@
 window.CHAPTERS = [
   {
     topic: "Rigid bodies",
-    title: "A cube colliding with a table",
+    title: "Collisions: from USD schema to simulation",
     text: [
-      "A cube is created and the simulation starts: it falls straight through the table, because it has no collision group.",
-      "Once a collision group is added and the simulation restarted, the cube lands on the table."
+      "I made rigid bodies and collisions usable in the editor: you add them to an object from the interface, and the physics scene follows.",
+      "In the video, the cube first falls through the table; once the collision group is added, it lands on it."
     ],
     integrated: "rigid body, collider, collision group",
     clips: [{ file: "../videos/cube-collision.webm", caption: "A cube without a collision group, then with one." }]
   },
   {
     topic: "Joints",
-    title: "Building a pendulum",
+    title: "Joints: linking two objects without writing code",
     text: [
-      "The cube is duplicated. The first one is locked in place with a FixedJoint; the second is attached to it with a RevoluteJoint.",
-      "When the simulation starts, the pair swings as a pendulum."
+      "I integrated joints so that two objects can be linked directly in the scene.",
+      "In the video, one cube is fixed and a second one is attached to it with a revolute joint: together they form a pendulum."
     ],
     integrated: "fixed joint, revolute joint",
     clips: [{ file: "../videos/pendule.webm", caption: "Building a pendulum from two cubes." }]
   },
   {
     topic: "Shape detection",
-    title: "Xde Kinema: face detection",
+    title: "Xde Kinema: placing a joint in the right spot",
     text: [
-      "On a more complex scene, the Xde Kinema tool analyses the face under the cursor on a mesh: normal, detected shape (plane, circle) and radius.",
-      "This information is used to place joints more precisely."
+      "I integrated the Xde Kinema tool, which analyses the face under the mouse cursor on a mesh: normal, detected shape (plane, circle) and radius.",
+      "This information is used to place joints more precisely on complex parts."
     ],
     integrated: "the Xde Kinema tool and joint creation from the detected face",
     clips: [{ file: "../videos/kinema.webm", caption: "Analysing the face under the mouse cursor." }]
   },
   {
+    id: "laval-virtual",
     topic: "Robotics",
-    title: "Robot arm: picking and inserting parts",
+    title: "Robotics: the Laval Virtual demonstration",
     text: [
-      "A robot arm picks parts one by one and inserts them into a holder. Contacts between the gripper, the parts and the holder are computed by XDE.",
-      "The robot's behaviour is described in OmniGraph, Omniverse's visual scripting system. This is the demonstration shown at Laval Virtual."
+      "I integrated what is needed to describe and drive a robot in the scene, including through visual graphs with OmniGraph.",
+      "In the video, a robot arm picks parts one by one and inserts them into a holder. This is the demonstration shown at Laval Virtual."
     ],
     integrated: "robot, gripper and its controller, trajectory planning and playback, OmniGraph nodes",
     clips: [{ file: "../videos/robot.webm", caption: "A robot picking parts and placing them in a holder." }]
@@ -46,17 +47,18 @@ window.CHAPTERS = [
     topic: "Digital twin",
     title: "Drone inside the WEST tokamak",
     text: [
-      "I fly a drone with a gamepad inside the torus of the WEST tokamak at Cadarache. The drone's physics is computed by XDE; the facility was scanned and reconstructed with Gaussian Splatting by another team in the lab.",
-      "Two viewpoints: behind the drone, and the onboard camera."
+      "I integrated gamepad control of a drone whose physics is computed by XDE, inside the WEST tokamak at Cadarache.",
+      "The facility was scanned and reconstructed with Gaussian Splatting by another team in the lab. Two viewpoints: behind the drone, and the onboard camera."
     ],
     integrated: "gamepad control of the drone in the simulated scene",
     clips: [{ file: "../videos/drone-tokamak.webm", caption: "View from behind the drone (left) and onboard camera (right)." }]
   },
   {
     topic: "Cables",
-    title: "Colliding cables",
+    title: "Deformable cables",
     text: [
-      "Deformable cables simulated by XDE: they bend, stretch and come into contact with each other."
+      "I made deformable cables usable in the editor, from their creation to their simulation.",
+      "In the video, cables bend, stretch and come into contact with each other."
     ],
     integrated: "cable, cable material, attachment points",
     clips: [{ file: "../videos/cable-collision.webm", caption: "Cables coming into contact with each other." }]
@@ -65,7 +67,8 @@ window.CHAPTERS = [
     topic: "Geometry",
     title: "Mesh cutting",
     text: [
-      "Cutting a mesh during the simulation. This feature relies on geometric computation rather than on the physics engine."
+      "I integrated the mesh cutting tool, which relies on geometric computation rather than on the physics engine.",
+      "In the video, an object is cut during the simulation."
     ],
     integrated: "the mesh cutting tool",
     clips: [{ file: "../videos/decoupe.webm", caption: "An object being cut during the simulation." }]

@@ -150,6 +150,15 @@ section { padding-top: 56px; }
 }
 .clip__placeholder code { font: 0.74rem var(--mono); }
 
+/* ---------- Savoir-faire ---------- */
+
+.skills-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.skills-cards li { padding: 18px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; display: flex; flex-direction: column; }
+.skills-cards strong { font-family: var(--serif); color: var(--heading); font-size: 1.05rem; }
+.skills-cards p { margin: 6px 0 12px; color: var(--muted); font-size: 0.92rem; flex: 1; }
+.skills-cards a { font: 500 0.74rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; }
+.skills-cards a::after { content: " \2192"; }
+
 /* ---------- Schéma d'intégration ---------- */
 
 .arch { margin: 0; }
@@ -192,6 +201,7 @@ section { padding-top: 56px; }
 @media (max-width: 720px) {
   .arch__chain, .arch .arch__parts { grid-template-columns: minmax(0, 1fr); }
   .arch .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skills-cards { grid-template-columns: minmax(0, 1fr); }
   .arch__chain { gap: 28px; }
   .arch__node:not(:last-child)::after { content: "↓"; right: auto; left: 50%; top: auto; bottom: -26px; transform: translateX(-50%); }
   .arch__loop ol { flex-direction: column; align-items: flex-start; }

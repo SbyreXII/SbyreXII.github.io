@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Josselin Renan — Ingénieur logiciel 3D</title>
-  <meta name="description" content="Ingénieur logiciel 3D au CEA List. Intégration du moteur physique XDE dans NVIDIA Omniverse, comme alternative à PhysX pour la simulation précise des collisions multiples.">
+  <meta name="description" content="Ingénieur logiciel 3D : j'intègre des moteurs de simulation dans des outils 3D temps réel (NVIDIA Omniverse, OpenUSD, Python, C++).">
   <meta property="og:title" content="Josselin Renan — Ingénieur logiciel 3D">
-  <meta property="og:description" content="Intégration du moteur physique XDE dans NVIDIA Omniverse, comme alternative à PhysX pour la simulation précise des collisions multiples.">
+  <meta property="og:description" content="Ingénieur logiciel 3D : j'intègre des moteurs de simulation dans des outils 3D temps réel (NVIDIA Omniverse, OpenUSD, Python, C++).">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sbyrexii.github.io/">
   <meta property="og:image" content="https://sbyrexii.github.io/og.jpg">
@@ -25,8 +25,9 @@
   <div class="nav__inner">
     <a class="nav__name" href="#top">Josselin Renan</a>
     <div class="nav__links">
+      <a href="#savoir-faire">Savoir-faire</a>
       <a href="#integration">Intégration</a>
-      <a href="#travaux">Travaux</a>
+      <a href="#travaux">Réalisations</a>
       <a href="#experience">Expérience</a>
       <a href="#competences">Compétences</a>
       <a href="#formation">Formation</a>
@@ -42,13 +43,12 @@
 
   <header class="intro">
     <h1>Josselin Renan</h1>
-    <p class="tagline">Ingénieur logiciel 3D · Simulation physique temps réel</p>
+    <p class="tagline">Ingénieur logiciel 3D · Intégration de moteurs de simulation</p>
     <p>
-      Ingénieur chercheur au CEA List depuis trois ans, j'intègre XDE, le moteur physique du laboratoire,
-      dans NVIDIA Omniverse, comme alternative à PhysX. J'ai développé les extensions qui rendent ses
-      fonctionnalités utilisables dans l'éditeur, de l'implémentation bas niveau jusqu'à l'interface de création
-      de scènes, et mis en place, en équipe, leur processus
-      d'intégration. Ces outils servent aux jumeaux numériques et aux démonstrateurs du laboratoire.
+      J'intègre des moteurs de simulation dans des outils 3D temps réel. Depuis trois ans au CEA List, je rends
+      le moteur physique du laboratoire, XDE, utilisable dans NVIDIA Omniverse : extensions Python, schémas
+      OpenUSD, interfaces d'édition et synchronisation temps réel. Ces outils servent aux jumeaux numériques
+      et aux démonstrateurs du laboratoire, présentés notamment aux XR Days avec Renault et à Laval Virtual.
     </p>
     <p>Disponible à partir de janvier 2027 pour un poste d'ingénieur logiciel 3D en simulation industrielle, en Île-de-France ou ailleurs en France.</p>
     <ul class="links">
@@ -61,13 +61,41 @@
 
   <figure class="showcase clip">
     <video src="videos/drone-tokamak.webm" muted loop playsinline preload="metadata"></video>
-    <figcaption>Un drone piloté à la manette dans le tokamak WEST reconstruit en Gaussian Splatting, physique calculée par XDE. <a href="#travaux">Voir les travaux</a></figcaption>
+    <figcaption>Un drone piloté à la manette dans le tokamak WEST reconstruit en Gaussian Splatting, physique calculée par XDE. <a href="#travaux">Voir les réalisations</a></figcaption>
   </figure>
+
+  <section id="savoir-faire" aria-labelledby="savoir-faire-titre">
+    <h2 class="label" id="savoir-faire-titre">Savoir-faire</h2>
+    <ul class="skills-cards">
+      <li>
+        <strong>Brancher un moteur C++ dans un outil 3D</strong>
+        <p>Du moteur compilé en DLL jusqu'aux extensions Omniverse, en passant par des paquets Python.</p>
+        <a href="#integration">Voir le schéma</a>
+      </li>
+      <li>
+        <strong>Décrire et synchroniser une scène physique</strong>
+        <p>Schémas OpenUSD sur mesure, et une boucle qui reporte l'état de la simulation sur la scène affichée toutes les 10 ms.</p>
+        <a href="#integration">Voir la boucle de simulation</a>
+      </li>
+      <li>
+        <strong>Construire des outils d'édition</strong>
+        <p>Panneaux de propriétés, outil de détection de faces, nœuds OmniGraph : pour créer une scène physique sans écrire de code.</p>
+        <a href="#travaux">Voir les réalisations</a>
+      </li>
+      <li>
+        <strong>Livrer des démonstrateurs</strong>
+        <p>Interaction physique en XR avec un véhicule pour Renault (XR Days), démonstration robotique à Laval Virtual.</p>
+        <a href="#laval-virtual">Voir la démo robot</a>
+      </li>
+    </ul>
+  </section>
 
   <section id="integration" aria-labelledby="integration-titre">
     <h2 class="label" id="integration-titre">Intégration · de XDE à Omniverse</h2>
     <p class="section-intro">
-      Les fonctionnalités physiques sont développées par les mathématiciens et physiciens du laboratoire.
+      XDE est le moteur physique du laboratoire : face à PhysX, le moteur fourni avec Omniverse, il se distingue
+      par un calcul très précis des collisions multiples. Ses fonctionnalités sont développées par les
+      mathématiciens et physiciens de l'équipe.
       Mon rôle : les intégrer dans Omniverse, en suivant un découpage mis en place en équipe qui permet
       d'ajouter de nouvelles fonctionnalités sans casser celles qui existent déjà.
     </p>
@@ -135,11 +163,9 @@
   </section>
 
   <section id="travaux" aria-labelledby="travaux-titre">
-    <h2 class="label" id="travaux-titre">Travaux · XDE dans Omniverse</h2>
+    <h2 class="label" id="travaux-titre">Réalisations</h2>
     <p class="section-intro">
-      Pourquoi XDE : face à PhysX, le moteur fourni avec Omniverse, il se distingue par un calcul très précis
-      des collisions multiples. Il repose sur l'ECS Flecs et apporte ses propres fonctionnalités, comme la
-      simulation de câbles. Dans les séquences ci-dessous, la physique est calculée par XDE.
+      Pour chaque réalisation : ce que j'ai construit, puis la vidéo enregistrée dans Omniverse qui le montre.
     </p>
     <ol class="works" id="chapters"></ol>
     <noscript><p class="section-intro">Activez JavaScript pour afficher les travaux et les vidéos.</p></noscript>

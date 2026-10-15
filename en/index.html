@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Josselin Renan — 3D Software Engineer</title>
-  <meta name="description" content="3D software engineer at CEA List. Integrating the XDE physics engine into NVIDIA Omniverse as an alternative to PhysX for accurate multi-contact simulation.">
+  <meta name="description" content="3D software engineer: I integrate simulation engines into real-time 3D tools (NVIDIA Omniverse, OpenUSD, Python, C++).">
   <meta property="og:title" content="Josselin Renan — 3D Software Engineer">
-  <meta property="og:description" content="Integrating the XDE physics engine into NVIDIA Omniverse as an alternative to PhysX for accurate multi-contact simulation.">
+  <meta property="og:description" content="3D software engineer: I integrate simulation engines into real-time 3D tools (NVIDIA Omniverse, OpenUSD, Python, C++).">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sbyrexii.github.io/en/">
   <meta property="og:image" content="https://sbyrexii.github.io/og.jpg">
@@ -25,8 +25,9 @@
   <div class="nav__inner">
     <a class="nav__name" href="#top">Josselin Renan</a>
     <div class="nav__links">
+      <a href="#expertise">Expertise</a>
       <a href="#integration">Integration</a>
-      <a href="#work">Work</a>
+      <a href="#work">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
@@ -42,13 +43,12 @@
 
   <header class="intro">
     <h1>Josselin Renan</h1>
-    <p class="tagline">3D Software Engineer · Real-time physics simulation</p>
+    <p class="tagline">3D Software Engineer · Simulation engine integration</p>
     <p>
-      Research engineer at CEA List for three years, I integrate XDE, the lab's physics engine, into
-      NVIDIA Omniverse as an alternative to PhysX. I developed the extensions that make its
-      features usable in the editor, from low-level implementation to the scene authoring interface, and set up
-      their integration process together with the team. These tools
-      support the lab's digital twins and demonstrators.
+      I integrate simulation engines into real-time 3D tools. For three years at CEA List, I have been making
+      the lab's physics engine, XDE, usable in NVIDIA Omniverse: Python extensions, OpenUSD schemas, editing
+      interfaces and real-time synchronisation. These tools support the lab's digital twins and demonstrators,
+      shown notably at XR Days with Renault and at Laval Virtual.
     </p>
     <p>Available from January 2027 for a 3D software engineer position in industrial simulation, in the Paris area or anywhere else in France.</p>
     <ul class="links">
@@ -61,13 +61,41 @@
 
   <figure class="showcase clip">
     <video src="../videos/drone-tokamak.webm" muted loop playsinline preload="metadata"></video>
-    <figcaption>A gamepad-controlled drone inside the WEST tokamak, reconstructed with Gaussian Splatting, with physics computed by XDE. <a href="#work">See the work</a></figcaption>
+    <figcaption>A gamepad-controlled drone inside the WEST tokamak, reconstructed with Gaussian Splatting, with physics computed by XDE. <a href="#work">See the projects</a></figcaption>
   </figure>
+
+  <section id="expertise" aria-labelledby="expertise-title">
+    <h2 class="label" id="expertise-title">Expertise</h2>
+    <ul class="skills-cards">
+      <li>
+        <strong>Plugging a C++ engine into a 3D tool</strong>
+        <p>From the engine compiled as DLLs to Omniverse extensions, through Python packages.</p>
+        <a href="#integration">See the diagram</a>
+      </li>
+      <li>
+        <strong>Describing and synchronising a physics scene</strong>
+        <p>Custom OpenUSD schemas, and a loop that writes the simulation state back to the displayed scene every 10 ms.</p>
+        <a href="#integration">See the simulation loop</a>
+      </li>
+      <li>
+        <strong>Building editing tools</strong>
+        <p>Property panels, a face detection tool, OmniGraph nodes: to build a physics scene without writing code.</p>
+        <a href="#work">See the projects</a>
+      </li>
+      <li>
+        <strong>Delivering demonstrators</strong>
+        <p>Physical interaction with a vehicle in XR for Renault (XR Days), robotics demonstration at Laval Virtual.</p>
+        <a href="#laval-virtual">See the robot demo</a>
+      </li>
+    </ul>
+  </section>
 
   <section id="integration" aria-labelledby="integration-title">
     <h2 class="label" id="integration-title">Integration · From XDE to Omniverse</h2>
     <p class="section-intro">
-      The physics features are developed by the lab's mathematicians and physicists. My role: integrating them into Omniverse, following a structure set up as a team that lets us add new
+      XDE is the lab's physics engine: compared with PhysX, the engine bundled with Omniverse, it stands out for
+      its highly accurate handling of multiple simultaneous contacts. Its features are developed by the team's
+      mathematicians and physicists. My role: integrating them into Omniverse, following a structure set up as a team that lets us add new
       features without breaking those that already exist.
     </p>
 
@@ -134,11 +162,9 @@
   </section>
 
   <section id="work" aria-labelledby="work-title">
-    <h2 class="label" id="work-title">Work · XDE in Omniverse</h2>
+    <h2 class="label" id="work-title">Projects</h2>
     <p class="section-intro">
-      Why XDE: compared with PhysX, the engine bundled with Omniverse, it stands out for its highly accurate
-      handling of multiple simultaneous contacts. It is built on the Flecs ECS and brings its own features,
-      such as cable simulation. In the clips below, the physics is computed by XDE.
+      For each project: what I built, then the video recorded in Omniverse that shows it.
     </p>
     <ol class="works" id="chapters"></ol>
     <noscript><p class="section-intro">Enable JavaScript to see the work and the videos.</p></noscript>
