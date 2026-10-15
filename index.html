@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Josselin Renan — Ingénieur logiciel 3D</title>
-  <meta name="description" content="Ingénieur logiciel 3D au CEA List. Intégration du moteur physique XDE dans NVIDIA Omniverse, comme alternative à PhysX.">
+  <meta name="description" content="Ingénieur logiciel 3D au CEA List. Intégration du moteur physique XDE dans NVIDIA Omniverse, comme alternative à PhysX pour la simulation précise des collisions multiples.">
   <meta property="og:title" content="Josselin Renan — Ingénieur logiciel 3D">
-  <meta property="og:description" content="Intégration du moteur physique XDE dans NVIDIA Omniverse, comme alternative à PhysX.">
+  <meta property="og:description" content="Intégration du moteur physique XDE dans NVIDIA Omniverse, comme alternative à PhysX pour la simulation précise des collisions multiples.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sbyrexii.github.io/">
   <meta property="og:image" content="https://sbyrexii.github.io/og.jpg">
@@ -38,7 +38,7 @@
     <p class="tagline">Ingénieur logiciel 3D · Simulation physique temps réel</p>
     <p>
       Ingénieur chercheur au CEA List depuis trois ans, je développe XDEPhysics : l'intégration de XDE,
-      le moteur physique du CEA, dans NVIDIA Omniverse, comme alternative à PhysX. Mon travail va de
+      le moteur physique du CEA, dans NVIDIA Omniverse, comme alternative à PhysX pour la simulation précise des collisions multiples. Mon travail va de
       l'implémentation bas niveau jusqu'à l'interface de création de scènes physiques (corps rigides,
       liaisons, robots, câbles), et sert aux jumeaux numériques et aux démonstrateurs du laboratoire.
     </p>
@@ -55,8 +55,13 @@
   <section id="travaux" aria-labelledby="travaux-titre">
     <h2 class="label" id="travaux-titre">Travaux · XDEPhysics dans Omniverse</h2>
     <p class="section-intro">
-      Les séquences ci-dessous sont enregistrées dans Omniverse avec les extensions XDEPhysics.
-      Toutes les simulations sont calculées par XDE, et non par PhysX, le moteur fourni par défaut.
+      Omniverse simule la physique avec PhysX. XDE, le moteur physique du CEA, s'en distingue par un calcul
+      très précis des collisions multiples. Il repose sur l'ECS Flecs et apporte un ensemble de fonctionnalités
+      propres : câbles, découpe de maillage, volume balayé…
+    </p>
+    <p class="section-intro">
+      Les séquences ci-dessous sont enregistrées dans Omniverse avec les extensions XDEPhysics :
+      toutes les simulations sont calculées par XDE.
     </p>
     <ol class="works" id="chapters"></ol>
     <noscript><p class="section-intro">Activez JavaScript pour afficher les travaux et les vidéos.</p></noscript>
@@ -99,7 +104,7 @@
       <div><dt>XR</dt><dd>OpenXR · VR · AR (Vuforia)</dd></div>
       <div><dt>Simulation</dt><dd>Intégration de moteur physique · Jumeaux numériques</dd></div>
       <div><dt>Langages</dt><dd>Python · C++ · C# · C</dd></div>
-      <div><dt>Architecture</dt><dd>POO · ECS</dd></div>
+      <div><dt>Architecture</dt><dd>POO · ECS (Flecs)</dd></div>
       <div><dt>Langues</dt><dd>Français · Anglais (TOEIC 905/990)</dd></div>
     </dl>
   </section>

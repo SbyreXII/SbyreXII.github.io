@@ -83,6 +83,7 @@ main { width: var(--page); margin: 0 auto; }
 section { padding-top: 56px; }
 .label { color: var(--accent); font-weight: 700; padding-bottom: 10px; border-bottom: 1px solid var(--line); margin-bottom: 28px; }
 .section-intro { max-width: 46em; color: var(--muted); margin-bottom: 32px; }
+.section-intro + .section-intro { margin-top: -18px; }
 
 /* ---------- Travaux ---------- */
 
