@@ -40,11 +40,12 @@ window.CHAPTERS = [
   },
   {
     topic: "Robotique",
-    title: "Robot piloté par OmniGraph",
+    title: "Bras robotisé : prise et insertion de pièces",
     text: [
-      "Dans la même scène, un robot réalise des opérations sur les objets simulés. Son comportement est décrit dans OmniGraph."
+      "Un bras robotisé saisit des pièces une à une et les insère dans un support. Les contacts entre la pince, les pièces et le support sont calculés par XDE.",
+      "Le comportement du robot est décrit dans OmniGraph, le système de graphes d'Omniverse."
     ],
-    clips: [{ file: "videos/robot.webm", caption: "Un robot réalise des opérations dans la scène." }]
+    clips: [{ file: "videos/robot.webm", caption: "Un robot qui prend des pièces et les range dans un support." }]
   },
   {
     topic: "Câbles",
@@ -58,19 +59,11 @@ window.CHAPTERS = [
     ]
   },
   {
-    topic: "Maillages",
+    topic: "Géométrie",
     title: "Découpe de maillage",
     text: [
-      "Découpe d'un maillage pendant la simulation."
+      "Découpe d'un maillage pendant la simulation. Cette fonctionnalité repose sur du calcul géométrique plutôt que sur le moteur physique."
     ],
     clips: [{ file: "videos/decoupe.webm", caption: "Un objet découpé pendant la simulation." }]
-  },
-  {
-    topic: "Analyse",
-    title: "Volume balayé",
-    text: [
-      "Calcul du volume parcouru par un objet au cours de son mouvement."
-    ],
-    clips: [{ file: "videos/volume-balaye.webm", caption: "Le volume parcouru par un objet en mouvement." }]
   }
 ];
