@@ -128,6 +128,50 @@ section { padding-top: 56px; }
 }
 .clip__placeholder code { font: 0.74rem var(--mono); }
 
+/* ---------- Schéma d'intégration ---------- */
+
+.arch { margin: 0; }
+.arch ol { list-style: none; margin: 0; padding: 0; }
+.arch strong { display: block; font-family: var(--serif); color: var(--heading); font-size: 1.05rem; }
+
+.arch__chain { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; }
+.arch__node { position: relative; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
+.arch__node span:last-child { display: block; color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+.arch__node:not(:last-child)::after {
+  content: "→";
+  position: absolute; right: -28px; top: 50%; transform: translateY(-50%);
+  color: var(--accent); font-size: 1.3rem;
+}
+.arch__node--accent { border-color: var(--accent); }
+.arch__kicker, .arch__loop-title { font: 500 0.7rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; }
+
+.arch .arch__parts {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;
+  margin-top: 22px; padding-top: 22px; border-top: 2px solid var(--accent);
+}
+.arch__parts li { padding: 16px 18px; border: 1px solid var(--line); border-radius: 6px; }
+.arch__parts p { margin: 6px 0 0; color: var(--muted); font-size: 0.9rem; }
+.arch__num {
+  display: inline-grid; place-items: center; width: 22px; height: 22px; margin-bottom: 8px;
+  border-radius: 50%; background: var(--heading); color: var(--bg); font: 700 0.72rem var(--mono);
+}
+
+.arch__loop { margin-top: 16px; padding: 16px 18px; background: var(--surface); border: 1px dashed var(--accent); border-radius: 6px; }
+.arch__loop ol { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 0; }
+.arch__loop li { font-size: 0.92rem; }
+.arch__loop li:not(:last-child)::after { content: "→"; color: var(--accent); margin: 0 12px; }
+.arch__loop-back { display: block; margin-top: 10px; font: 0.78rem var(--mono); color: var(--muted); }
+
+.arch figcaption { margin-top: 16px; color: var(--muted); font-size: 0.9rem; max-width: 46em; }
+
+@media (max-width: 720px) {
+  .arch__chain, .arch .arch__parts { grid-template-columns: minmax(0, 1fr); }
+  .arch__chain { gap: 28px; }
+  .arch__node:not(:last-child)::after { content: "↓"; right: auto; left: 50%; top: auto; bottom: -26px; transform: translateX(-50%); }
+  .arch__loop ol { flex-direction: column; align-items: flex-start; }
+  .arch__loop li:not(:last-child)::after { content: "↓"; display: block; margin: 4px 0; }
+}
+
 /* ---------- Expérience, formation ---------- */
 
 .entry { display: grid; grid-template-columns: 10.5em minmax(0, 1fr); gap: 24px; padding-bottom: 26px; }

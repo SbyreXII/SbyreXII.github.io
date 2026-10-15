@@ -23,6 +23,7 @@
   <div class="nav__inner">
     <a class="nav__name" href="#top">Josselin Renan</a>
     <div class="nav__links">
+      <a href="#integration">Intégration</a>
       <a href="#travaux">Travaux</a>
       <a href="#experience">Expérience</a>
       <a href="#competences">Compétences</a>
@@ -57,6 +58,69 @@
       <li><a class="button" href="CV_Josselin_Renan.pdf" download>↓ CV (PDF)</a></li>
     </ul>
   </header>
+
+  <section id="integration" aria-labelledby="integration-titre">
+    <h2 class="label" id="integration-titre">Intégration · de XDE à Omniverse</h2>
+    <p class="section-intro">
+      Les fonctionnalités physiques sont développées par les mathématiciens et physiciens du laboratoire.
+      Mon travail : les rendre utilisables dans Omniverse, avec un découpage qui permet d'en ajouter de
+      nouvelles sans casser l'existant.
+    </p>
+
+    <figure class="arch">
+      <ol class="arch__chain">
+        <li class="arch__node">
+          <span class="arch__kicker">Moteur</span>
+          <strong>XDE</strong>
+          <span>Moteur physique C++, compilé en DLL</span>
+        </li>
+        <li class="arch__node">
+          <span class="arch__kicker">Bindings</span>
+          <strong>Wheels Python</strong>
+          <span>Les DLL deviennent utilisables depuis Python</span>
+        </li>
+        <li class="arch__node arch__node--accent">
+          <span class="arch__kicker">Omniverse Kit</span>
+          <strong>Extensions XDEPhysics</strong>
+          <span>Importent les wheels et se divisent en trois parties</span>
+        </li>
+      </ol>
+
+      <ol class="arch__parts">
+        <li>
+          <span class="arch__num">1</span>
+          <strong>Schémas</strong>
+          <p>Décrivent les attributs de chaque composant (masse, forme, liaison…) directement dans la scène USD.</p>
+        </li>
+        <li>
+          <span class="arch__num">2</span>
+          <strong>Propriétés</strong>
+          <p>Ajoutent les composants dans la hiérarchie de la scène et permettent de modifier leurs valeurs.</p>
+        </li>
+        <li>
+          <span class="arch__num">3</span>
+          <strong>Simulation</strong>
+          <p>Lit l'état de la scène, en construit une scène physique XDE en local et la fait tourner.</p>
+        </li>
+      </ol>
+
+      <div class="arch__loop" aria-label="Boucle de simulation">
+        <span class="arch__loop-title">Boucle de simulation</span>
+        <ol>
+          <li>Scène Omniverse</li>
+          <li>Scène physique XDE</li>
+          <li>Un pas de simulation</li>
+          <li>État appliqué à la scène visuelle</li>
+        </ol>
+        <span class="arch__loop-back">↺ toutes les 10 ms, intervalle réglable</span>
+      </div>
+
+      <figcaption>
+        Le même découpage se répète pour chaque domaine (physique, robotique, géométrie, humain, assemblage) :
+        ajouter une fonctionnalité revient à ajouter un composant dans chaque partie, sans empiler les couches.
+      </figcaption>
+    </figure>
+  </section>
 
   <section id="travaux" aria-labelledby="travaux-titre">
     <h2 class="label" id="travaux-titre">Travaux · XDEPhysics dans Omniverse</h2>
