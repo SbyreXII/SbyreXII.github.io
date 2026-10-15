@@ -46,8 +46,8 @@ window.CHAPTERS = [
   },
   {
     id: "renault",
-    topic: "Démonstrateur XR",
-    title: "Renault : manipuler une voiture en XR",
+    topic: "Jumeau numérique",
+    title: "Renault : jumeau numérique de la R5 en XR",
     text: [
       "Démonstrateur réalisé avec Renault : on ouvre les portes et le coffre d'une Renault 5, on y range une valise et on manipule l'habitacle à la main, en temps réel. La physique des pièces est calculée par XDE dans Omniverse.",
       "Présenté à Laval Virtual en avril 2025 avec un casque Apple Vision Pro, en réalité mixte, puis aux XR Days 2025 en réalité virtuelle. Ce n'est pas moi qui manipule sur les vidéos."

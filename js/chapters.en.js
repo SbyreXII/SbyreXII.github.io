@@ -34,8 +34,8 @@ window.CHAPTERS = [
   },
   {
     id: "renault",
-    topic: "XR demonstrator",
-    title: "Renault: handling a car in XR",
+    topic: "Digital twin",
+    title: "Renault: an R5 digital twin in XR",
     text: [
       "A demonstrator built with Renault: you open the doors and the boot of a Renault 5, put a suitcase inside and handle the interior with your hands, in real time. The parts' physics is computed by XDE in Omniverse.",
       "Shown at Laval Virtual in April 2025 with an Apple Vision Pro headset, in mixed reality, then at XR Days 2025 in virtual reality. That's not me handling the car in the videos."
