@@ -31,13 +31,13 @@ window.CHAPTERS = [
   },
   {
     id: "drone",
-    topic: "Digital twin",
-    title: "Drone inside the WEST tokamak: Laval Virtual 2026 demonstration",
+    topic: "Gaussian Splatting",
+    title: "WEST tokamak: collisions with a Gaussian Splatting scene",
     text: [
-      "I integrated gamepad control of a drone whose physics is computed by XDE, inside the WEST tokamak at Cadarache.",
-      "The facility was scanned and reconstructed with Gaussian Splatting by another team in the lab. Two viewpoints: behind the drone, and the onboard camera. Demonstration shown at Laval Virtual in 2026."
+      "I made a Gaussian Splatting (3DGS) scene physical so that XDE can compute collisions with it. Here, the inside of the WEST tokamak at Cadarache, scanned and reconstructed in 3DGS by another team in the lab.",
+      "In the video, a gamepad-controlled drone flies inside the torus. Two viewpoints: behind the drone, and the onboard camera. Demonstration shown at Laval Virtual in 2026."
     ],
-    integrated: "gamepad control of the drone in the simulated scene",
+    integrated: "physicalising a 3DGS scene for XDE collisions, gamepad control of the drone",
     clips: [{ file: "../videos/drone-tokamak.webm", caption: "View from behind the drone (left) and onboard camera (right)." }]
   }
 ];

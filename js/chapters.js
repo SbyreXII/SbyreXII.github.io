@@ -43,13 +43,13 @@ window.CHAPTERS = [
   },
   {
     id: "drone",
-    topic: "Jumeau numérique",
-    title: "Drone dans le tokamak WEST : démonstration de Laval Virtual 2026",
+    topic: "Gaussian Splatting",
+    title: "Tokamak WEST : des collisions avec une scène en Gaussian Splatting",
     text: [
-      "J'ai intégré le pilotage à la manette d'un drone dont la physique est calculée par XDE, à l'intérieur du tokamak WEST de Cadarache.",
-      "L'installation a été numérisée et reconstruite en Gaussian Splatting par une autre équipe du laboratoire. Deux vues : derrière le drone, et la caméra embarquée. Démonstration présentée à Laval Virtual en 2026."
+      "J'ai physicalisé une scène en Gaussian Splatting (3DGS) pour que XDE puisse calculer des collisions avec elle. Ici, l'intérieur du tokamak WEST de Cadarache, numérisé puis reconstruit en 3DGS par une autre équipe du laboratoire.",
+      "Dans la vidéo, un drone piloté à la manette évolue dans le tore. Deux vues : derrière le drone, et la caméra embarquée. Démonstration présentée à Laval Virtual en 2026."
     ],
-    integrated: "pilotage du drone à la manette dans la scène simulée",
+    integrated: "physicalisation d'une scène 3DGS pour les collisions XDE, pilotage du drone à la manette",
     clips: [{ file: "videos/drone-tokamak.webm", caption: "Vue depuis l'arrière du drone (à gauche) et caméra embarquée (à droite)." }]
   }
 ];
