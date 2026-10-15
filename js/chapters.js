@@ -30,7 +30,7 @@ window.CHAPTERS = [
     clips: [{ file: "videos/pendule.webm", caption: "Création d'un pendule à partir de deux cubes." }]
   },
   {
-    topic: "Liaisons",
+    topic: "Détection de forme",
     title: "Xde Kinema : détection de face",
     text: [
       "Sur une scène plus complexe, l'outil Xde Kinema analyse la face pointée sur un maillage : normale, forme reconnue (plan, cercle) et rayon.",
