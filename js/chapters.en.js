@@ -8,13 +8,12 @@ window.CHAPTERS = [
     title: "First building blocks: collisions and joints",
     text: [
       "My first integrations, in 2023: making rigid bodies, collisions and joints usable in the editor, without writing code. You add them to objects from the interface, and the physics scene follows.",
-      "The Xde Kinema tool completes this work: it analyses the face under the mouse cursor (normal, detected shape, radius) to place joints more precisely on complex parts."
+      "In the videos, a cube falls through the table, then lands on it once its collision group is added; two cubes linked by a revolute joint form a pendulum."
     ],
-    integrated: "rigid body, collider, collision group, fixed and revolute joints, Xde Kinema tool",
+    integrated: "rigid body, collider, collision group, fixed and revolute joints",
     clips: [
       { file: "../videos/cube-collision.webm", caption: "A cube without a collision group, then with one." },
-      { file: "../videos/pendule.webm", caption: "Building a pendulum from two cubes." },
-      { file: "../videos/kinema.webm", caption: "Xde Kinema: analysing the face under the mouse cursor." }
+      { file: "../videos/pendule.webm", caption: "Building a pendulum from two cubes." }
     ]
   },
   {
