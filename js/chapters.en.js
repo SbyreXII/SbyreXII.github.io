@@ -9,7 +9,7 @@ window.CHAPTERS = [
       "A cube is created and the simulation starts: it falls straight through the table, because it has no collision group.",
       "Once a collision group is added and the simulation restarted, the cube lands on the table."
     ],
-    integrated: "rigid body, collision group",
+    integrated: "rigid body, collider, collision group",
     clips: [{ file: "../videos/cube-collision.webm", caption: "A cube without a collision group, then with one." }]
   },
   {
@@ -44,9 +44,9 @@ window.CHAPTERS = [
   },
   {
     topic: "Digital twin",
-    title: "Drone inside the Cadarache tokamak",
+    title: "Drone inside the WEST tokamak",
     text: [
-      "I fly a drone with a gamepad inside the torus of the Cadarache tokamak. The facility was scanned and reconstructed with Gaussian Splatting by another team in the lab.",
+      "I fly a drone with a gamepad inside the torus of the WEST tokamak at Cadarache. The drone's physics is computed by XDE; the facility was scanned and reconstructed with Gaussian Splatting by another team in the lab.",
       "Two viewpoints: behind the drone, and the onboard camera."
     ],
     integrated: "gamepad control of the drone in the simulated scene",

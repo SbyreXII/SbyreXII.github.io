@@ -182,9 +182,13 @@ section { padding-top: 56px; }
 .arch__loop-back { display: block; margin-top: 10px; font: 0.78rem var(--mono); color: var(--muted); }
 
 .arch figcaption { margin-top: 16px; color: var(--muted); font-size: 0.9rem; max-width: 46em; }
+.arch .stats { list-style: none; padding-left: 0; margin-bottom: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+.stats strong { display: block; font: 600 1.7rem/1.1 var(--serif); color: var(--heading); }
+.stats span { display: block; margin-top: 4px; font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
 
 @media (max-width: 720px) {
   .arch__chain, .arch .arch__parts { grid-template-columns: minmax(0, 1fr); }
+  .arch .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .arch__chain { gap: 28px; }
   .arch__node:not(:last-child)::after { content: "↓"; right: auto; left: 50%; top: auto; bottom: -26px; transform: translateX(-50%); }
   .arch__loop ol { flex-direction: column; align-items: flex-start; }
