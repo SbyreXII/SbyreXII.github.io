@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Josselin Renan — 3D Software Engineer</title>
+  <meta name="description" content="3D software engineer at CEA List. Integrating the XDE physics engine into NVIDIA Omniverse as an alternative to PhysX for accurate multi-contact simulation.">
+  <meta property="og:title" content="Josselin Renan — 3D Software Engineer">
+  <meta property="og:description" content="Integrating the XDE physics engine into NVIDIA Omniverse as an alternative to PhysX for accurate multi-contact simulation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sbyrexii.github.io/en/">
+  <meta property="og:image" content="https://sbyrexii.github.io/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Xde Kinema tool in NVIDIA Omniverse: face detection on an industrial scene.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="fr" href="https://sbyrexii.github.io/">
+  <link rel="alternate" hreflang="en" href="https://sbyrexii.github.io/en/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231f3d3a'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-weight='700' text-anchor='middle' fill='%23faf9f6'%3EJR%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a class="nav__name" href="#top">Josselin Renan</a>
+    <div class="nav__links">
+      <a href="#integration">Integration</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+    </div>
+    <div class="lang" aria-label="Language">
+      <a href="../" hreflang="fr" lang="fr">FR</a>
+      <span aria-current="true">EN</span>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <header class="intro">
+    <h1>Josselin Renan</h1>
+    <p class="tagline">3D Software Engineer · Real-time physics simulation</p>
+    <p>
+      Research engineer at CEA List for three years, I integrate XDE — the physics engine developed by the
+      lab's mathematicians and physicists — into NVIDIA Omniverse, as an alternative to PhysX for accurate
+      multi-contact simulation.
+    </p>
+    <p>
+      My role: finding the right way to integrate it. I designed a set of Omniverse extensions and a process
+      that makes it possible to add new features without breaking existing ones or stacking up layers. This
+      work spans from low-level implementation to the authoring interface for physics scenes (rigid bodies,
+      joints, robots, cables), and supports the lab's digital twins and demonstrators.
+    </p>
+    <p>Available from January 2027 for a 3D software engineer position in industrial simulation, in the Paris area or anywhere else in France.</p>
+    <ul class="links">
+      <li><a href="mailto:josselin.renan@gmail.com">josselin.renan@gmail.com</a></li>
+      <li><a href="tel:+33695744030">+33 6 95 74 40 30</a></li>
+      <li><a href="https://www.linkedin.com/in/josselin-renan" rel="me noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/SbyreXII" rel="me noopener">GitHub</a></li>
+      <li><a class="button" href="../CV_Josselin_Renan.pdf" download>↓ CV (PDF, French)</a></li>
+    </ul>
+  </header>
+
+  <section id="integration" aria-labelledby="integration-title">
+    <h2 class="label" id="integration-title">Integration · From XDE to Omniverse</h2>
+    <p class="section-intro">
+      The physics features are developed by the lab's mathematicians and physicists. My job: making these
+      features usable in Omniverse, with a structure that lets us add new ones without breaking those that
+      already exist.
+    </p>
+
+    <figure class="arch">
+      <ol class="arch__chain">
+        <li class="arch__node">
+          <span class="arch__kicker">Engine</span>
+          <strong>XDE</strong>
+          <span>Physics engine written in C++, shipped as DLLs</span>
+        </li>
+        <li class="arch__node">
+          <span class="arch__kicker">Bindings</span>
+          <strong>Python wheels</strong>
+          <span>Packages that make the engine callable from Python</span>
+        </li>
+        <li class="arch__node arch__node--accent">
+          <span class="arch__kicker">Omniverse Kit</span>
+          <strong>XDEPhysics extensions</strong>
+          <span>Load these packages into Omniverse; each extension has three parts</span>
+        </li>
+      </ol>
+
+      <ol class="arch__parts">
+        <li>
+          <span class="arch__num">1</span>
+          <strong>Schemas</strong>
+          <p>Define, in the USD scene, the attributes of each component (mass, shape, joint…).</p>
+        </li>
+        <li>
+          <span class="arch__num">2</span>
+          <strong>Properties</strong>
+          <p>Let users add components to scene objects and edit their values.</p>
+        </li>
+        <li>
+          <span class="arch__num">3</span>
+          <strong>Simulation</strong>
+          <p>Reads the Omniverse scene, builds a physics copy of it in XDE and runs it.</p>
+        </li>
+      </ol>
+
+      <div class="arch__loop" aria-label="Simulation loop">
+        <span class="arch__loop-title">Simulation loop</span>
+        <ol>
+          <li>Omniverse scene</li>
+          <li>XDE physics scene</li>
+          <li>One simulation step</li>
+          <li>Result written back to the displayed scene</li>
+        </ol>
+        <span class="arch__loop-back">↺ every step: every 10 ms by default, adjustable</span>
+      </div>
+
+      <figcaption>
+        The same structure repeats for every domain (physics, robotics, geometry, human, assembly):
+        adding a feature means adding a component to each part, without stacking up layers.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section id="work" aria-labelledby="work-title">
+    <h2 class="label" id="work-title">Work · XDEPhysics in Omniverse</h2>
+    <p class="section-intro">
+      Omniverse simulates physics with PhysX. XDE, CEA's physics engine, stands out for its highly accurate
+      handling of multiple simultaneous contacts. It is built on the Flecs ECS and brings its own features,
+      such as cable simulation.
+    </p>
+    <p class="section-intro">
+      The clips below are recorded in Omniverse with the XDEPhysics extensions: the physics is computed by XDE.
+    </p>
+    <ol class="works" id="chapters"></ol>
+    <noscript><p class="section-intro">Enable JavaScript to see the work and the videos.</p></noscript>
+  </section>
+
+  <section id="experience" aria-labelledby="experience-title">
+    <h2 class="label" id="experience-title">Experience</h2>
+    <div class="entry">
+      <p class="entry__date">11/2023 – 11/2026</p>
+      <div>
+        <h3>Research engineer</h3>
+        <p class="entry__org">CEA List · Interactive Simulation Laboratory</p>
+        <p>Development of the XDEPhysics extensions for Omniverse Kit: integration of the XDE physics engine, custom OpenUSD schemas describing physics and interactions, runtime processing with USDRT. Tools used by five people in the lab.</p>
+        <p>Digital twins for critical environments (nuclear site decommissioning), VR assembly scene with robot interaction, machining scenes.</p>
+        <p>Demonstrators: real-time physical interaction with a vehicle in XR for Renault, shown at XR Days (La Ruche Industrielle); the XDEPhysics platform at Laval Virtual.</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="entry__date">04/2023 – 11/2023</p>
+      <div>
+        <h3>Final-year internship</h3>
+        <p class="entry__org">CEA List · Interactive Simulation Laboratory</p>
+        <p>Exploring NVIDIA Omniverse with a view to integrating XDE. Hired at the end of the internship.</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="entry__date">11/2021 – 04/2022</p>
+      <div>
+        <h3>VR development internship</h3>
+        <p class="entry__org">Virtual Rangers</p>
+        <p>Immersive CAVE experience for CFL (Luxembourg railways): interactive exploration of 3D building models. Design of a playful virtual reality experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" aria-labelledby="skills-title">
+    <h2 class="label" id="skills-title">Skills</h2>
+    <dl class="skills">
+      <div><dt>Engines and platforms</dt><dd>NVIDIA Omniverse (Kit) · OpenUSD · Unity</dd></div>
+      <div><dt>XR</dt><dd>OpenXR · VR · AR (Vuforia)</dd></div>
+      <div><dt>Simulation</dt><dd>Physics engine integration · Digital twins</dd></div>
+      <div><dt>Languages</dt><dd>Python · C++ · C# · C</dd></div>
+      <div><dt>Architecture</dt><dd>OOP · ECS (Flecs)</dd></div>
+      <div><dt>Spoken languages</dt><dd>French · English (TOEIC 905/990)</dd></div>
+    </dl>
+  </section>
+
+  <section id="education" aria-labelledby="education-title">
+    <h2 class="label" id="education-title">Education</h2>
+    <div class="entry">
+      <p class="entry__date">2018 – 2023</p>
+      <div>
+        <h3>Engineering degree (Master's level)</h3>
+        <p class="entry__org">EFREI Paris</p>
+        <p>Major in 3D and immersive technologies.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year">2026</span> Josselin Renan · XDE is a physics engine developed by CEA List.</p>
+</footer>
+
+<script src="../js/chapters.en.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

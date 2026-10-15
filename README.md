@@ -21,6 +21,11 @@ ffmpeg -i source.mp4 -vf "scale=-2:1080" -c:v libx264 -crf 26 -preset slow -an -
 
 Pour une vidéo longue, héberge-la sur YouTube et remplace `file` par `youtube: "<identifiant>"`.
 
+## Version anglaise
+
+La version anglaise est dans `en/index.html`, avec ses entrées dans `js/chapters.en.js` (chemins des vidéos préfixés par `../`).
+Toute modification de texte ou d'entrée est à reporter dans les deux langues.
+
 ## Prévisualiser en local
 
 ```bash

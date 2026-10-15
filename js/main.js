@@ -22,7 +22,7 @@
       return;
     }
     const box = el("div", "clip__placeholder");
-    box.append(el("span", null, "Vidéo à venir"), el("code", null, clip.file));
+    box.append(el("span", null, document.documentElement.lang === "en" ? "Video coming soon" : "Vidéo à venir"), el("code", null, clip.file));
     figure.replaceChildren(box);
   }
 
