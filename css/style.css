@@ -125,6 +125,7 @@ section { padding-top: 56px; }
   border-radius: 4px;
   background: #000;
 }
+.clip img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; }
 .clip video:not([controls]) { cursor: zoom-in; }
 .lightbox {
   padding: 0; border: 0; background: transparent; max-width: 96vw; max-height: 92vh; overflow: visible;

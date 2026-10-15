@@ -38,10 +38,13 @@ window.CHAPTERS = [
     title: "Robotics: the Laval Virtual demonstration",
     text: [
       "I integrated what is needed to describe and drive a robot in the scene, including through visual graphs with OmniGraph.",
-      "In the video, a robot arm picks parts one by one and inserts them into a holder. This is the demonstration shown at Laval Virtual in 2026."
+      "In the video, a robot arm picks parts one by one and inserts them into a holder. This demonstration was shown at Laval Virtual in 2026, and in VR at Cap Digital in May 2026 as part of CEA List's 2MORDOR platform."
     ],
     integrated: "robot, gripper and its controller, trajectory planning and playback, OmniGraph nodes",
-    clips: [{ file: "../videos/robot.webm", caption: "A robot picking parts and placing them in a holder." }]
+    clips: [
+      { file: "../videos/robot.webm", caption: "A robot picking parts and placing them in a holder." },
+      { image: "../images/cap-digital-2026.jpg", caption: "Presenting the demonstrator at Cap Digital, May 2026 (I'm on the left)." }
+    ]
   },
   {
     topic: "Digital twin",

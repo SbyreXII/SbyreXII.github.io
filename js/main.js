@@ -30,7 +30,13 @@
   function buildClip(clip) {
     const figure = el("figure", "clip");
 
-    if (clip.youtube) {
+    if (clip.image) {
+      const img = el("img");
+      img.src = clip.image;
+      img.alt = clip.caption || "";
+      img.loading = "lazy";
+      figure.append(img);
+    } else if (clip.youtube) {
       const iframe = el("iframe");
       iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(clip.youtube)}`;
       iframe.title = clip.caption || "Vidéo";

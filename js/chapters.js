@@ -11,7 +11,7 @@
 //   title      : titre
 //   text       : paragraphes ; le premier dit ce que j'ai construit, le suivant ce que montre la vidéo
 //   integrated : composants intégrés, affichés sous le texte (optionnel)
-//   clips      : vidéos, chacune avec file (ou youtube), poster et caption optionnels
+//   clips      : vidéos (file ou youtube) ou photos (image), avec poster et caption optionnels
 
 window.CHAPTERS = [
   {
@@ -50,10 +50,13 @@ window.CHAPTERS = [
     title: "Robotique : la démonstration de Laval Virtual",
     text: [
       "J'ai intégré de quoi décrire et piloter un robot dans la scène, y compris par graphes visuels avec OmniGraph.",
-      "Dans la vidéo, un bras saisit des pièces une à une et les insère dans un support. C'est la démonstration présentée à Laval Virtual en 2026."
+      "Dans la vidéo, un bras saisit des pièces une à une et les insère dans un support. Cette démonstration a été présentée à Laval Virtual en 2026, et en VR chez Cap Digital en mai 2026 au sein de la plateforme 2MORDOR du CEA List."
     ],
     integrated: "robot, pince et son contrôleur, planification et lecture de trajectoires, nœuds OmniGraph",
-    clips: [{ file: "videos/robot.webm", caption: "Un robot qui prend des pièces et les range dans un support." }]
+    clips: [
+      { file: "videos/robot.webm", caption: "Un robot qui prend des pièces et les range dans un support." },
+      { image: "images/cap-digital-2026.jpg", caption: "Présentation du démonstrateur chez Cap Digital, mai 2026 (je suis à gauche)." }
+    ]
   },
   {
     topic: "Jumeau numérique",
