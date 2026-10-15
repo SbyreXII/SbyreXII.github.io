@@ -69,6 +69,11 @@
     text.append(el("p", "work__meta", `${String(index + 1).padStart(2, "0")} · ${chapter.topic}`));
     text.append(el("h3", null, chapter.title));
     for (const paragraph of chapter.text || []) text.append(el("p", null, paragraph));
+    if (chapter.integrated) {
+      const did = el("p", "work__did");
+      did.append(el("span", null, en ? "Integrated" : "Intégré"), document.createTextNode(chapter.integrated));
+      text.append(did);
+    }
     item.append(text);
 
     const media = el("div", "work__media");
