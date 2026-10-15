@@ -38,7 +38,7 @@ window.CHAPTERS = [
     title: "Robotics: the Laval Virtual demonstration",
     text: [
       "I integrated what is needed to describe and drive a robot in the scene, including through visual graphs with OmniGraph.",
-      "In the video, a robot arm picks parts one by one and inserts them into a holder. This is the demonstration shown at Laval Virtual."
+      "In the video, a robot arm picks parts one by one and inserts them into a holder. This is the demonstration shown at Laval Virtual in 2026."
     ],
     integrated: "robot, gripper and its controller, trajectory planning and playback, OmniGraph nodes",
     clips: [{ file: "../videos/robot.webm", caption: "A robot picking parts and placing them in a holder." }]
@@ -48,7 +48,7 @@ window.CHAPTERS = [
     title: "Drone inside the WEST tokamak",
     text: [
       "I integrated gamepad control of a drone whose physics is computed by XDE, inside the WEST tokamak at Cadarache.",
-      "The facility was scanned and reconstructed with Gaussian Splatting by another team in the lab. Two viewpoints: behind the drone, and the onboard camera."
+      "The facility was scanned and reconstructed with Gaussian Splatting by another team in the lab. Two viewpoints: behind the drone, and the onboard camera. Demonstration shown at Laval Virtual in 2026."
     ],
     integrated: "gamepad control of the drone in the simulated scene",
     clips: [{ file: "../videos/drone-tokamak.webm", caption: "View from behind the drone (left) and onboard camera (right)." }]

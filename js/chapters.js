@@ -50,7 +50,7 @@ window.CHAPTERS = [
     title: "Robotique : la démonstration de Laval Virtual",
     text: [
       "J'ai intégré de quoi décrire et piloter un robot dans la scène, y compris par graphes visuels avec OmniGraph.",
-      "Dans la vidéo, un bras saisit des pièces une à une et les insère dans un support. C'est la démonstration présentée à Laval Virtual."
+      "Dans la vidéo, un bras saisit des pièces une à une et les insère dans un support. C'est la démonstration présentée à Laval Virtual en 2026."
     ],
     integrated: "robot, pince et son contrôleur, planification et lecture de trajectoires, nœuds OmniGraph",
     clips: [{ file: "videos/robot.webm", caption: "Un robot qui prend des pièces et les range dans un support." }]
@@ -60,7 +60,7 @@ window.CHAPTERS = [
     title: "Drone dans le tokamak WEST",
     text: [
       "J'ai intégré le pilotage à la manette d'un drone dont la physique est calculée par XDE, à l'intérieur du tokamak WEST de Cadarache.",
-      "L'installation a été numérisée et reconstruite en Gaussian Splatting par une autre équipe du laboratoire. Deux vues : derrière le drone, et la caméra embarquée."
+      "L'installation a été numérisée et reconstruite en Gaussian Splatting par une autre équipe du laboratoire. Deux vues : derrière le drone, et la caméra embarquée. Démonstration présentée à Laval Virtual en 2026."
     ],
     integrated: "pilotage du drone à la manette dans la scène simulée",
     clips: [{ file: "videos/drone-tokamak.webm", caption: "Vue depuis l'arrière du drone (à gauche) et caméra embarquée (à droite)." }]
