@@ -72,17 +72,17 @@
         <li class="arch__node">
           <span class="arch__kicker">Moteur</span>
           <strong>XDE</strong>
-          <span>Moteur physique C++, compilé en DLL</span>
+          <span>Moteur physique écrit en C++, livré sous forme de DLL</span>
         </li>
         <li class="arch__node">
           <span class="arch__kicker">Bindings</span>
           <strong>Wheels Python</strong>
-          <span>Les DLL deviennent utilisables depuis Python</span>
+          <span>Paquets Python qui rendent le moteur appelable depuis Python</span>
         </li>
         <li class="arch__node arch__node--accent">
           <span class="arch__kicker">Omniverse Kit</span>
           <strong>Extensions XDEPhysics</strong>
-          <span>Importent les wheels et se divisent en trois parties</span>
+          <span>Chargent ces paquets dans Omniverse ; chaque extension se compose de trois parties</span>
         </li>
       </ol>
 
@@ -90,17 +90,17 @@
         <li>
           <span class="arch__num">1</span>
           <strong>Schémas</strong>
-          <p>Décrivent les attributs de chaque composant (masse, forme, liaison…) directement dans la scène USD.</p>
+          <p>Définissent, dans la scène USD, les attributs de chaque composant (masse, forme, liaison…).</p>
         </li>
         <li>
           <span class="arch__num">2</span>
           <strong>Propriétés</strong>
-          <p>Ajoutent les composants dans la hiérarchie de la scène et permettent de modifier leurs valeurs.</p>
+          <p>Permettent d'ajouter des composants aux objets de la scène et d'en modifier les valeurs.</p>
         </li>
         <li>
           <span class="arch__num">3</span>
           <strong>Simulation</strong>
-          <p>Lit l'état de la scène, en construit une scène physique XDE en local et la fait tourner.</p>
+          <p>Lit la scène Omniverse, en construit une copie physique dans XDE et la fait tourner.</p>
         </li>
       </ol>
 
@@ -110,9 +110,9 @@
           <li>Scène Omniverse</li>
           <li>Scène physique XDE</li>
           <li>Un pas de simulation</li>
-          <li>État appliqué à la scène visuelle</li>
+          <li>Résultat reporté sur la scène affichée</li>
         </ol>
-        <span class="arch__loop-back">↺ toutes les 10 ms, intervalle réglable</span>
+        <span class="arch__loop-back">↺ à chaque pas : toutes les 10 ms par défaut, réglable</span>
       </div>
 
       <figcaption>
