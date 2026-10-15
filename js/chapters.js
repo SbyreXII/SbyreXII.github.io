@@ -20,7 +20,7 @@ window.CHAPTERS = [
       "Un cube est créé puis la simulation est lancée : il tombe et traverse la table, faute de groupe de collision.",
       "Après ajout d'un groupe de collision et relance de la simulation, le cube se pose sur la table."
     ],
-    integrated: "corps rigide, collisionneur cube, groupe de collision",
+    integrated: "corps rigide, groupe de collision",
     clips: [{ file: "videos/cube-collision.webm", caption: "Un cube sans groupe de collision, puis avec." }]
   },
   {
@@ -57,9 +57,10 @@ window.CHAPTERS = [
     topic: "Jumeau numérique",
     title: "Drone dans le tokamak de Cadarache",
     text: [
-      "Je pilote un drone à l'intérieur du tore du tokamak de Cadarache. L'installation a été numérisée puis reconstruite en Gaussian Splatting par une autre équipe du laboratoire.",
+      "Je pilote un drone à la manette à l'intérieur du tore du tokamak de Cadarache. L'installation a été numérisée puis reconstruite en Gaussian Splatting par une autre équipe du laboratoire.",
       "Deux points de vue : derrière le drone, et la caméra embarquée."
     ],
+    integrated: "pilotage du drone à la manette dans la scène simulée",
     clips: [{ file: "videos/drone-tokamak.webm", caption: "Vue depuis l'arrière du drone (à gauche) et caméra embarquée (à droite)." }]
   },
   {
