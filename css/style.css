@@ -112,6 +112,8 @@ section { padding-top: 56px; }
 .work h3 { margin-bottom: 10px; }
 .work__text p:last-child { margin-bottom: 0; }
 .work__did { font-size: 0.9rem; color: var(--muted); padding-top: 10px; border-top: 1px solid var(--line); }
+.works-more { margin: 8px 0 0; padding-top: 18px; border-top: 1px solid var(--line); font-size: 0.9rem; color: var(--muted); }
+.works-more span { display: block; font: 600 0.7rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
 .work__did span { display: block; font: 600 0.7rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
 
 .work__media { display: grid; gap: 16px; }

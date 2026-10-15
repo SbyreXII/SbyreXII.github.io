@@ -15,34 +15,19 @@
 
 window.CHAPTERS = [
   {
-    topic: "Corps rigides",
-    title: "Collisions : du schéma USD à la simulation",
+    id: "premieres-briques",
+    topic: "Collisions et liaisons",
+    title: "Premières briques : collisions et liaisons",
     text: [
-      "J'ai rendu les corps rigides et les collisions utilisables dans l'éditeur : on les ajoute à un objet depuis l'interface, et la scène physique suit.",
-      "Dans la vidéo, le cube traverse d'abord la table ; une fois le groupe de collision ajouté, il se pose dessus."
+      "Mes premières intégrations, en 2023 : rendre les corps rigides, les collisions et les liaisons utilisables dans l'éditeur, sans écrire de code. On les ajoute aux objets depuis l'interface, et la scène physique suit.",
+      "L'outil Xde Kinema complète ce travail : il analyse la face pointée à la souris (normale, forme reconnue, rayon) pour placer les liaisons plus précisément sur des pièces complexes."
     ],
-    integrated: "corps rigide, collider, groupe de collision",
-    clips: [{ file: "videos/cube-collision.webm", caption: "Un cube sans groupe de collision, puis avec." }]
-  },
-  {
-    topic: "Liaisons",
-    title: "Liaisons : relier deux objets sans écrire de code",
-    text: [
-      "J'ai intégré les liaisons pour qu'on puisse relier deux objets directement dans la scène.",
-      "Dans la vidéo, un cube est fixé et un second lui est attaché par une liaison pivot : l'ensemble forme un pendule."
-    ],
-    integrated: "liaison fixe (FixedJoint), liaison pivot (RevoluteJoint)",
-    clips: [{ file: "videos/pendule.webm", caption: "Création d'un pendule à partir de deux cubes." }]
-  },
-  {
-    topic: "Détection de forme",
-    title: "Xde Kinema : placer une liaison au bon endroit",
-    text: [
-      "J'ai intégré l'outil Xde Kinema, qui analyse la face pointée à la souris sur un maillage : normale, forme reconnue (plan, cercle) et rayon.",
-      "Ces informations servent à positionner des liaisons plus précisément sur des pièces complexes."
-    ],
-    integrated: "l'outil Xde Kinema et la création de liaisons à partir de la face détectée",
-    clips: [{ file: "videos/kinema.webm", caption: "Analyse de la face pointée à la souris." }]
+    integrated: "corps rigide, collider, groupe de collision, liaisons fixe et pivot, outil Xde Kinema",
+    clips: [
+      { file: "videos/cube-collision.webm", caption: "Un cube sans groupe de collision, puis avec." },
+      { file: "videos/pendule.webm", caption: "Création d'un pendule à partir de deux cubes." },
+      { file: "videos/kinema.webm", caption: "Xde Kinema : analyse de la face pointée à la souris." }
+    ]
   },
   {
     id: "renault",
@@ -81,25 +66,5 @@ window.CHAPTERS = [
     ],
     integrated: "pilotage du drone à la manette dans la scène simulée",
     clips: [{ file: "videos/drone-tokamak.webm", caption: "Vue depuis l'arrière du drone (à gauche) et caméra embarquée (à droite)." }]
-  },
-  {
-    topic: "Câbles",
-    title: "Câbles déformables",
-    text: [
-      "J'ai rendu les câbles déformables utilisables dans l'éditeur, de leur création à leur simulation.",
-      "Dans la vidéo, des câbles se plient, se tendent et entrent en contact les uns avec les autres."
-    ],
-    integrated: "câble, matériau de câble, points d'attache",
-    clips: [{ file: "videos/cable-collision.webm", caption: "Des câbles qui entrent en contact les uns avec les autres." }]
-  },
-  {
-    topic: "Géométrie",
-    title: "Découpe de maillage",
-    text: [
-      "J'ai intégré l'outil de découpe de maillage, qui repose sur du calcul géométrique plutôt que sur le moteur physique.",
-      "Dans la vidéo, un objet est découpé pendant la simulation."
-    ],
-    integrated: "l'outil de découpe de maillage",
-    clips: [{ file: "videos/decoupe.webm", caption: "Un objet découpé pendant la simulation." }]
   }
 ];

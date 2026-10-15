@@ -3,34 +3,19 @@
 
 window.CHAPTERS = [
   {
-    topic: "Rigid bodies",
-    title: "Collisions: from USD schema to simulation",
+    id: "first-building-blocks",
+    topic: "Collisions and joints",
+    title: "First building blocks: collisions and joints",
     text: [
-      "I made rigid bodies and collisions usable in the editor: you add them to an object from the interface, and the physics scene follows.",
-      "In the video, the cube first falls through the table; once the collision group is added, it lands on it."
+      "My first integrations, in 2023: making rigid bodies, collisions and joints usable in the editor, without writing code. You add them to objects from the interface, and the physics scene follows.",
+      "The Xde Kinema tool completes this work: it analyses the face under the mouse cursor (normal, detected shape, radius) to place joints more precisely on complex parts."
     ],
-    integrated: "rigid body, collider, collision group",
-    clips: [{ file: "../videos/cube-collision.webm", caption: "A cube without a collision group, then with one." }]
-  },
-  {
-    topic: "Joints",
-    title: "Joints: linking two objects without writing code",
-    text: [
-      "I integrated joints so that two objects can be linked directly in the scene.",
-      "In the video, one cube is fixed and a second one is attached to it with a revolute joint: together they form a pendulum."
-    ],
-    integrated: "fixed joint, revolute joint",
-    clips: [{ file: "../videos/pendule.webm", caption: "Building a pendulum from two cubes." }]
-  },
-  {
-    topic: "Shape detection",
-    title: "Xde Kinema: placing a joint in the right spot",
-    text: [
-      "I integrated the Xde Kinema tool, which analyses the face under the mouse cursor on a mesh: normal, detected shape (plane, circle) and radius.",
-      "This information is used to place joints more precisely on complex parts."
-    ],
-    integrated: "the Xde Kinema tool and joint creation from the detected face",
-    clips: [{ file: "../videos/kinema.webm", caption: "Analysing the face under the mouse cursor." }]
+    integrated: "rigid body, collider, collision group, fixed and revolute joints, Xde Kinema tool",
+    clips: [
+      { file: "../videos/cube-collision.webm", caption: "A cube without a collision group, then with one." },
+      { file: "../videos/pendule.webm", caption: "Building a pendulum from two cubes." },
+      { file: "../videos/kinema.webm", caption: "Xde Kinema: analysing the face under the mouse cursor." }
+    ]
   },
   {
     id: "renault",
@@ -69,25 +54,5 @@ window.CHAPTERS = [
     ],
     integrated: "gamepad control of the drone in the simulated scene",
     clips: [{ file: "../videos/drone-tokamak.webm", caption: "View from behind the drone (left) and onboard camera (right)." }]
-  },
-  {
-    topic: "Cables",
-    title: "Deformable cables",
-    text: [
-      "I made deformable cables usable in the editor, from their creation to their simulation.",
-      "In the video, cables bend, stretch and come into contact with each other."
-    ],
-    integrated: "cable, cable material, attachment points",
-    clips: [{ file: "../videos/cable-collision.webm", caption: "Cables coming into contact with each other." }]
-  },
-  {
-    topic: "Geometry",
-    title: "Mesh cutting",
-    text: [
-      "I integrated the mesh cutting tool, which relies on geometric computation rather than on the physics engine.",
-      "In the video, an object is cut during the simulation."
-    ],
-    integrated: "the mesh cutting tool",
-    clips: [{ file: "../videos/decoupe.webm", caption: "An object being cut during the simulation." }]
   }
 ];
