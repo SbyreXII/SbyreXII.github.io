@@ -18,7 +18,7 @@ window.CHAPTERS = [
       "Un cube est créé puis la simulation est lancée : il tombe et traverse la table, faute de groupe de collision.",
       "Après ajout d'un groupe de collision et relance de la simulation, le cube se pose sur la table."
     ],
-    clips: [{ file: "videos/cube-collision.webm", caption: "Le cube sans groupe de collision, puis avec." }]
+    clips: [{ file: "videos/cube-collision.webm", caption: "Un cube sans groupe de collision, puis avec." }]
   },
   {
     topic: "Liaisons",
