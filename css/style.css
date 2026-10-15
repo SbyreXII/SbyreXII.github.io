@@ -55,7 +55,7 @@ a:hover { color: var(--heading); }
 
 .nav { position: sticky; top: 0; z-index: 10; background: var(--surface); border-bottom: 1px solid var(--line); }
 .nav__inner { width: var(--page); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 0; }
-.nav__name { font-family: var(--serif); font-weight: 600; color: var(--heading); text-decoration: none; }
+.nav__name { font-family: var(--serif); font-weight: 600; color: var(--heading); text-decoration: none; white-space: nowrap; }
 .nav__links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 22px; }
 .nav__links a { color: var(--muted); text-decoration: none; }
 .nav__links a:hover { color: var(--heading); }
@@ -148,6 +148,9 @@ section { padding-top: 56px; }
 
 @media (max-width: 720px) {
   h1 { font-size: 2rem; }
+  /* Sur téléphone, la barre ne garde que le nom : les liens de section prenaient deux lignes d'écran. */
+  .nav__links { display: none; }
+  .nav__inner { padding: 10px 0; }
   .work, .entry, .skills { grid-template-columns: minmax(0, 1fr); }
   .work { gap: 18px; }
   .entry { gap: 4px; }
