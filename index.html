@@ -168,7 +168,24 @@
       Pour chaque réalisation : ce que j'ai construit, puis la vidéo enregistrée dans Omniverse qui le montre.
     </p>
     <ol class="works" id="chapters"></ol>
-    <p class="works-more"><span>Autres composants intégrés</span>câbles déformables, matériaux de câble et points d'attache, outils de maillage (découpe, création de maillages par code), outil Xde Kinema de détection de faces.</p>
+    <div class="features">
+      <h3>Fonctionnalités intégrées</h3>
+      <p>
+        En dehors des démonstrations, mon travail consiste à intégrer une à une les fonctionnalités du moteur :
+        attributs du schéma, interface de création, synchronisation avec la simulation. Quelques exemples :
+      </p>
+      <div class="features__grid">
+        <figure class="clip">
+          <video src="videos/collisions-liaisons.webm" muted loop playsinline preload="metadata"></video>
+          <figcaption>Mes premières intégrations (2023) : un cube qui traverse la table, puis s'y pose une fois son groupe de collision ajouté ; deux cubes reliés par une liaison pivot qui forment un pendule.</figcaption>
+        </figure>
+        <figure class="clip">
+          <video src="videos/cables-decoupe.webm" muted loop playsinline preload="metadata"></video>
+          <figcaption>Des câbles déformables qui entrent en contact, puis un objet découpé pendant la simulation.</figcaption>
+        </figure>
+      </div>
+      <p class="works-more"><span>Autres composants intégrés</span>corps rigides et colliders, liaisons fixe et pivot, câbles (matériaux, points d'attache), outils de maillage (découpe, création de maillages par code), outil Xde Kinema de détection de faces.</p>
+    </div>
     <noscript><p class="section-intro">Activez JavaScript pour afficher les travaux et les vidéos.</p></noscript>
   </section>
 

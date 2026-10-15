@@ -3,20 +3,6 @@
 
 window.CHAPTERS = [
   {
-    id: "first-building-blocks",
-    topic: "Collisions and joints",
-    title: "First building blocks: collisions and joints",
-    text: [
-      "My first integrations, in 2023: making rigid bodies, collisions and joints usable in the editor, without writing code. You add them to objects from the interface, and the physics scene follows.",
-      "In the videos, a cube falls through the table, then lands on it once its collision group is added; two cubes linked by a revolute joint form a pendulum."
-    ],
-    integrated: "rigid body, collider, collision group, fixed and revolute joints",
-    clips: [
-      { file: "../videos/cube-collision.webm", caption: "A cube without a collision group, then with one." },
-      { file: "../videos/pendule.webm", caption: "Building a pendulum from two cubes." }
-    ]
-  },
-  {
     id: "renault",
     topic: "Digital twin",
     title: "Renault: an R5 digital twin in XR",

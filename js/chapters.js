@@ -15,20 +15,6 @@
 
 window.CHAPTERS = [
   {
-    id: "premieres-briques",
-    topic: "Collisions et liaisons",
-    title: "Premières briques : collisions et liaisons",
-    text: [
-      "Mes premières intégrations, en 2023 : rendre les corps rigides, les collisions et les liaisons utilisables dans l'éditeur, sans écrire de code. On les ajoute aux objets depuis l'interface, et la scène physique suit.",
-      "Dans les vidéos, un cube traverse la table puis s'y pose une fois son groupe de collision ajouté ; deux cubes reliés par une liaison pivot forment un pendule."
-    ],
-    integrated: "corps rigide, collider, groupe de collision, liaisons fixe et pivot",
-    clips: [
-      { file: "videos/cube-collision.webm", caption: "Un cube sans groupe de collision, puis avec." },
-      { file: "videos/pendule.webm", caption: "Création d'un pendule à partir de deux cubes." }
-    ]
-  },
-  {
     id: "renault",
     topic: "Jumeau numérique",
     title: "Renault : jumeau numérique de la R5 en XR",

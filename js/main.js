@@ -93,15 +93,14 @@
   const list = document.getElementById("chapters");
   (window.CHAPTERS || []).forEach((chapter, i) => list.append(buildWork(chapter, i)));
 
-  // Vidéo de vitrine sous la présentation : mêmes règles que celles des travaux.
-  const showcase = document.querySelector(".showcase video");
-  if (showcase) {
-    showcase.controls = reducedMotion;
+  // Vidéos écrites dans la page (vitrine, fonctionnalités) : mêmes règles que celles des réalisations.
+  document.querySelectorAll(".showcase video, .features video").forEach((video) => {
+    video.controls = reducedMotion;
     if (!reducedMotion) {
-      showcase.title = en ? "Click to enlarge" : "Cliquer pour agrandir";
-      showcase.addEventListener("click", () => openLightbox(showcase.getAttribute("src")));
+      video.title = en ? "Click to enlarge" : "Cliquer pour agrandir";
+      video.addEventListener("click", () => openLightbox(video.getAttribute("src")));
     }
-  }
+  });
 
   // Lecture quand la vidéo approche de l'écran, pause quand elle en sort.
   if (!reducedMotion) {
@@ -111,7 +110,7 @@
         else target.pause();
       }
     }, { rootMargin: "200px 0px" });
-    document.querySelectorAll(".work video, .showcase video").forEach((video) => visibility.observe(video));
+    document.querySelectorAll(".work video, .showcase video, .features video").forEach((video) => visibility.observe(video));
   }
 
   // Agrandissement d'une vidéo au clic, dans une fenêtre par-dessus la page.
