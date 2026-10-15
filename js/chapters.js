@@ -38,7 +38,7 @@ window.CHAPTERS = [
     integrated: "robot, pince et son contrôleur, planification et lecture de trajectoires, nœuds OmniGraph",
     clips: [
       { file: "videos/robot.webm", caption: "Un robot qui prend des pièces et les range dans un support." },
-      { image: "images/cap-digital-2026.jpg", caption: "Présentation du démonstrateur chez Cap Digital, mai 2026 (je suis à gauche)." }
+      { image: "images/cap-digital-2026.jpg", caption: "Présentation du démonstrateur chez Cap Digital, mai 2026." }
     ]
   },
   {

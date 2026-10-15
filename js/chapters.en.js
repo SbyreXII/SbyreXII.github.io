@@ -26,7 +26,7 @@ window.CHAPTERS = [
     integrated: "robot, gripper and its controller, trajectory planning and playback, OmniGraph nodes",
     clips: [
       { file: "../videos/robot.webm", caption: "A robot picking parts and placing them in a holder." },
-      { image: "../images/cap-digital-2026.jpg", caption: "Presenting the demonstrator at Cap Digital, May 2026 (I'm on the left)." }
+      { image: "../images/cap-digital-2026.jpg", caption: "Presenting the demonstrator at Cap Digital, May 2026." }
     ]
   },
   {
