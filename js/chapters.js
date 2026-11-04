@@ -44,12 +44,12 @@ window.CHAPTERS = [
   {
     id: "drone",
     topic: "Gaussian Splatting",
-    title: "Tokamak WEST : des collisions avec une scène en Gaussian Splatting",
+    title: "Tokamak WEST : des collisions dans une scène scannée",
     text: [
-      "J'ai physicalisé une scène en Gaussian Splatting (3DGS) pour que XDE puisse calculer des collisions avec elle. Ici, l'intérieur du tokamak WEST de Cadarache, numérisé puis reconstruit en 3DGS par une autre équipe du laboratoire.",
-      "Dans la vidéo, un drone piloté à la manette évolue dans le tore. Deux vues : derrière le drone, et la caméra embarquée. Démonstration présentée à Laval Virtual en 2026."
+      "Le tokamak WEST de Cadarache a été scanné par une autre équipe du laboratoire. Le scan fournit deux choses : un rendu en Gaussian Splatting (3DGS), très réaliste, pour l'affichage, et un maillage de l'installation.",
+      "J'ai physicalisé ce maillage pour que XDE calcule les collisions avec l'environnement : on voit la scène en 3DGS, et les contacts se font sur le maillage. Dans la vidéo, un drone piloté à la manette évolue dans le tore, avec deux vues : derrière le drone et caméra embarquée. Démonstration présentée à Laval Virtual en 2026."
     ],
-    integrated: "physicalisation d'une scène 3DGS pour les collisions XDE, pilotage du drone à la manette",
+    integrated: "physicalisation du maillage issu du scan pour les collisions XDE, sous le rendu 3DGS ; pilotage du drone à la manette",
     clips: [{ file: "videos/drone-tokamak.webm", caption: "Vue depuis l'arrière du drone (à gauche) et caméra embarquée (à droite)." }]
   }
 ];

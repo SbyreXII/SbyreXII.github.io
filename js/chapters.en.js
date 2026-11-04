@@ -32,12 +32,12 @@ window.CHAPTERS = [
   {
     id: "drone",
     topic: "Gaussian Splatting",
-    title: "WEST tokamak: collisions with a Gaussian Splatting scene",
+    title: "WEST tokamak: collisions in a scanned scene",
     text: [
-      "I made a Gaussian Splatting (3DGS) scene physical so that XDE can compute collisions with it. Here, the inside of the WEST tokamak at Cadarache, scanned and reconstructed in 3DGS by another team in the lab.",
-      "In the video, a gamepad-controlled drone flies inside the torus. Two viewpoints: behind the drone, and the onboard camera. Demonstration shown at Laval Virtual in 2026."
+      "The WEST tokamak at Cadarache was scanned by another team in the lab. The scan provides two things: a highly realistic Gaussian Splatting (3DGS) rendering for display, and a mesh of the facility.",
+      "I made this mesh physical so that XDE computes collisions with the environment: you see the scene in 3DGS, while contacts happen on the mesh. In the video, a gamepad-controlled drone flies inside the torus, with two viewpoints: behind the drone and onboard camera. Demonstration shown at Laval Virtual in 2026."
     ],
-    integrated: "physicalising a 3DGS scene for XDE collisions, gamepad control of the drone",
+    integrated: "physicalising the scanned mesh for XDE collisions, under the 3DGS rendering; gamepad control of the drone",
     clips: [{ file: "../videos/drone-tokamak.webm", caption: "View from behind the drone (left) and onboard camera (right)." }]
   }
 ];
