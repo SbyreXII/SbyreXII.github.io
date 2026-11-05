@@ -173,14 +173,13 @@ section { padding-top: 56px; }
 .arch strong { display: block; font-family: var(--serif); color: var(--heading); font-size: 1.05rem; }
 
 .arch__chain { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; }
-.arch__node { position: relative; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
+.arch__node { position: relative; padding: 16px 18px; background: var(--surface); border: 1px solid var(--accent); border-radius: 6px; }
 .arch__node span:last-child { display: block; color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
 .arch__node:not(:last-child)::after {
   content: "→";
   position: absolute; right: -28px; top: 50%; transform: translateY(-50%);
   color: var(--accent); font-size: 1.3rem;
 }
-.arch__node--accent { border-color: var(--accent); }
 .arch__kicker, .arch__loop-title { font: 500 0.7rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; }
 
 .arch .arch__parts {
