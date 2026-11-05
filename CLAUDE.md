@@ -1,7 +1,7 @@
 # Site vitrine — notes de projet
 
-Site statique (HTML / CSS / JS, sans build) publié par GitHub Pages sur https://sbyrexii.github.io
-(dépôt `SbyreXII/SbyreXII.github.io`, branche `main` : un `git push` met le site à jour en 1 à 2 minutes).
+Site statique (HTML / CSS / JS, sans build) publié par GitHub Pages sur https://jossrenan.github.io
+(dépôt `jossrenan/jossrenan.github.io`, branche `main` : un `git push` met le site à jour en 1 à 2 minutes).
 
 ## Structure
 
